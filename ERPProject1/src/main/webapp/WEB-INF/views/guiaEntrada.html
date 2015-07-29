@@ -1,0 +1,406 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta http-equiv="X-UA-Compatible" content="IE=edge">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+<title>ERP</title>
+
+<!-- Bootstrap -->
+    <link rel="stylesheet" href="css/bootstrap.min.css">
+    <link rel="stylesheet" href="css/carousel.css">
+    <link rel="stylesheet" href="css/megasite/reset.css">
+    <link rel="stylesheet" href="css/megasite/style.css"> <!-- Resource style -->
+    <link rel="stylesheet" href="css/main.css">
+    <script src="js/megasite/modernizr.js"></script> <!-- Modernizr -->
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+              <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+              <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+            <![endif]-->
+</head>
+    <body>
+        <header class="cd-main-header">
+            <a class="cd-logo" href="#0"><img src="images/cd-logo.svg" alt="Logo"></a>
+            
+            <nav class="cd-nav">
+                <ul id="cd-primary-nav" class="cd-primary-nav is-fixed">
+                    <li class="has-children">
+                        <a href="#">Datos Maestros</a>
+                        <ul class="cd-nav-icons is-hidden">
+                            <li class="go-back"><a href="#">Menu</a></li>
+                            <li>
+                                <a class="cd-nav-item item-1" href="#">
+                                    <h3 class="h3-menu">Gestion de Material</h3>
+                                    <p>Gestion de Material</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="cd-nav-item item-2" href="#">
+                                    <h3 class="h3-menu">Gestion de Proveedor</h3>
+                                    <p>Gestion de Proveedor</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="cd-nav-item item-3" href="#">
+                                    <h3 class="h3-menu">Gestion de Clientes</h3>
+                                    <p>Gestion de Clientes</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="cd-nav-item item-4" href="#">
+                                    <h3 class="h3-menu">Gestion de Centros</h3>
+                                    <p>Gestion de Centros</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="cd-nav-item item-5" href="#">
+                                    <h3 class="h3-menu">Gestion de Familia</h3>
+                                    <p>Gestion de Familia</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="has-children">
+                        <a href="#">Inventarios</a>
+                        <ul class="cd-nav-icons is-hidden">
+                            <li class="go-back"><a href="#0">Menu</a></li>
+                            <li>
+                                <a class="cd-nav-item item-1" href="#">
+                                    <h3 class="h3-menu">Guia de Entrada</h3>
+                                    <p>Guia de Entrada</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="cd-nav-item item-2" href="#">
+                                    <h3 class="h3-menu">Guia de Salida</h3>
+                                    <p>Guia de Salida</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="cd-nav-item item-3" href="#">
+                                    <h3 class="h3-menu">Transferencias</h3>
+                                    <p>Transferencias</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="cd-nav-item item-4" href="#">
+                                    <h3 class="h3-menu">Mermas</h3>
+                                    <p>Mermas</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="cd-nav-item item-5" href="#">
+                                    <h3 class="h3-menu">Ajuste de Inventario</h3>
+                                    <p>Ajuste de Inventario</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="has-children">
+                        <a href="#">Compras</a>
+                        <ul class="cd-nav-icons is-hidden">
+                            <li class="go-back"><a href="#0">Menu</a></li>
+                            <li>
+                                <a class="cd-nav-item item-1" href="#">
+                                    <h3 class="h3-menu">Orden de Compra</h3>
+                                    <p>Orden de Compra</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="cd-nav-item item-2" href="#">
+                                    <h3 class="h3-menu">Solicitud de Pedido/Cotizacion</h3>
+                                    <p>Solicitud de Pedido/Cotizacion</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="cd-nav-item item-3" href="#">
+                                    <h3 class="h3-menu">Orden de Servicio</h3>
+                                    <p>Orden de Servicio</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="cd-nav-item item-4" href="#">
+                                    <h3 class="h3-menu">Sugerido de Compra</h3>
+                                    <p>Sugerido de Compra</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="cd-nav-item item-5" href="#">
+                                    <h3 class="h3-menu">Importaciones</h3>
+                                    <p>Importaciones</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="has-children">
+                        <a href="#">Produccion</a>
+                        <ul class="cd-nav-icons is-hidden">
+                            <li class="go-back"><a href="#0">Menu</a></li>
+                            <li>
+                                <a class="cd-nav-item item-1" href="#">
+                                    <h3 class="h3-menu">Lista de Materiales</h3>
+                                    <p>Lista de Materiales</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="cd-nav-item item-2" href="#">
+                                    <h3 class="h3-menu">Centros de Trabajo</h3>
+                                    <p>Centros de Trabajo</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="cd-nav-item item-3" href="#">
+                                    <h3 class="h3-menu">Ruta de Fabricacion</h3>
+                                    <p>Ruta de Fabricacion</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="cd-nav-item item-4" href="#">
+                                    <h3 class="h3-menu">Planificador de Necesidades</h3>
+                                    <p>Planificador de Necesidades</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="cd-nav-item item-5" href="#">
+                                    <h3 class="h3-menu">Ordenes de Fabricacion</h3>
+                                    <p>Ordenes de Fabricacion</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="cd-nav-item item-6" href="#">
+                                    <h3 class="h3-menu">Plan Maestro de Produccion</h3>
+                                    <p>Plan Maestro de Produccion</p>
+                                </a>
+                            </li>
+                            <li>
+                                <a class="cd-nav-item item-7" href="#">
+                                    <h3 class="h3-menu">Seguimiento a Orden de Fabricacion</h3>
+                                    <p>Seguimiento a Orden de Fabricacion</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                    <li class="has-children">
+                        <a href="#">Ventas</a>
+                        <ul class="cd-nav-icons is-hidden">
+                            <li class="go-back"><a href="#0">Menu</a></li>
+                            <li>
+                                <a class="cd-nav-item item-1" href="#">
+                                    <h3 class="h3-menu">Pedido de Venta</h3>
+                                    <p>Pedido de Venta</p>
+                                </a>
+                            </li>
+                        </ul>
+                    </li>
+                </ul> <!-- primary-nav -->
+            </nav> <!-- cd-nav -->
+    
+            <ul class="cd-header-buttons">
+                <li><a href="#cd-primary-nav" class="cd-nav-trigger"><span></span></a></li>
+            </ul> <!-- cd-header-buttons -->
+        </header>
+        
+        <div class="container cd-main-content">
+            <div class="row">
+                <ul class="breadcrumb breadcrumb-whitebg">
+                    <li><a href="#">Inventario</a></li>
+                    <li class="active">Guia de Entrada</li>
+                    </ul>
+            </div>
+            <div class="row row-title">
+                <div class="col-md-9">
+                    <h2 id="navbar-buttons">Guia de Entrada</h2>
+                </div>
+                <div class="col-md-3">
+                    <div class="pull-right btn-title">
+                    </div>
+                </div>
+            </div>
+            <div class="row">
+                <div class="panel-body">
+                    <form class="form-horizontal" role="form">
+                        <div class="form-group">
+                            <label class="col-md-2 control-label" for="textinput">Tipo de Documento</label>
+                            <div class="col-md-3">
+                                <input id="textinput" name="textinput" placeholder="Tipo de Documento" class="form-control input-md"
+                                    type="text">
+                            </div>
+                            <label class="col-md-2 control-label" for="textinput">Nro de Documento</label>
+                            <div class="col-md-3">
+                                <input id="textinput" name="textinput" placeholder="Nro de Documento"
+                                    class="form-control input-md" type="text">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-2 control-label" for="textinput">Proveedor</label>
+                            <div class="col-md-3">
+                                <input id="textinput" name="textinput" placeholder="Proveedor" class="form-control input-md"
+                                    type="text">
+                            </div>
+                            <label class="col-md-2 control-label" for="textinput">Fecha de Recepcion</label>
+                            <div class="col-md-3">
+                                <div class='input-group date datepicker'>
+                                    <input type='text' class="form-control" /> <span class="input-group-addon">
+                                        <span class="glyphicon glyphicon-calendar"></span>
+                                    </span>
+                                </div>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-2 control-label" for="textinput">Centro</label>
+                            <div class="col-md-3">
+                                <input id="textinput" name="textinput" placeholder="Centro" class="form-control input-md"
+                                    type="text">
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <div class="col-md-5">
+                            </div>
+                            <div class="col-md-5">
+                                
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+
+            <div role="tabpanel">
+                <table class="table table-hover table-condensed table-bordered">
+                    <thead>
+                        <tr>
+                            <th>Item</th>
+                            <th>Producto</th>
+                            <th>Descripcion</th>
+                            <th>Cantidad Solicitada</th>
+                            <th>Cantidad Recibida</th>
+                            <th>Unidad de Medida</th>
+                            <th>Costo</th>
+                        </tr>
+                    </thead>
+                    <tbody>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                        <tr>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                            <td>&nbsp;</td>
+                        </tr>
+                    </tbody>
+                </table>
+            </div>
+            
+            <div role="tabpanel">
+
+                <!-- Nav tabs -->
+                <ul class="nav nav-tabs" role="tablist">
+                    <li role="presentation"><a href="#documentosEntrega" aria-controls="documentosEntrega" role="tab" data-toggle="tab">Documentos de Entrega</a></li>
+                    <li role="presentation"><a href="#datosFactura" aria-controls="datosFactura" role="tab" data-toggle="tab">Datos de Factura</a></li>
+                </ul>
+                
+                <div class="tab-content">
+                    <div role="tabpanel" class="tab-pane active" id="documentosEntrega">
+                        <div class="row clearfix row-space">
+                            <form class="form-horizontal" role="form">
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label" for="textinput">Tipo de Documento</label>
+                                    <div class="col-md-3">
+                                        <input id="textinput" name="textinput" placeholder="Tipo de Documento"
+                                            class="form-control input-md" type="text">
+                                    </div>
+                                    <label class="col-md-2 control-label" for="textinput">Nro de Documento</label>
+                                    <div class="col-md-3">
+                                        <input id="textinput" name="textinput" placeholder="Nro de Documento"
+                                            class="form-control input-md" type="text">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                    <div role="tabpanel" class="tab-pane" id="datosFactura">
+                        <div class="row clearfix row-space">
+                            <form class="form-horizontal" role="form">
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label" for="textinput">Nro de Factura</label>
+                                    <div class="col-md-3">
+                                        <input id="textinput" name="textinput" placeholder="Nro de Factura"
+                                            class="form-control input-md" type="text">
+                                    </div>
+                                    <label class="col-md-2 control-label" for="textinput">Sub Total</label>
+                                    <div class="col-md-3">
+                                        <input id="textinput" name="textinput" placeholder="Sub Total"
+                                            class="form-control input-md" type="text">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label" for="textinput">Descuento</label>
+                                    <div class="col-md-3">
+                                        <input id="textinput" name="textinput" placeholder="Descuento"
+                                            class="form-control input-md" type="text">
+                                    </div>
+                                    <label class="col-md-2 control-label" for="textinput">Importe Neto</label>
+                                    <div class="col-md-3">
+                                        <input id="textinput" name="textinput" placeholder="Importe Neto"
+                                            class="form-control input-md" type="text">
+                                    </div>
+                                </div>
+                                <div class="form-group">
+                                    <label class="col-md-2 control-label" for="textinput">IGV</label>
+                                    <div class="col-md-3">
+                                        <input id="textinput" name="textinput" placeholder="IGV"
+                                            class="form-control input-md" type="text">
+                                    </div>
+                                    <label class="col-md-2 control-label" for="textinput">Total</label>
+                                    <div class="col-md-3">
+                                        <input id="textinput" name="textinput" placeholder="Total"
+                                            class="form-control input-md" type="text">
+                                    </div>
+                                </div>
+                            </form>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+        <div class="cd-overlay"></div>
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script src="js/jquery/jquery-2.1.1.js"></script>
+        <script src="js/jquery/jquery.mobile.custom.min.js"></script>
+        <script src="js/megasite/main.js"></script> <!-- Resource jQuery -->
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script src="js/bootstrap.min.js"></script>
+        <script type="text/javascript">
+    		$(document).ready(function() {
+    			$('#myTab a').click(function(e) {
+    				e.preventDefault()
+    				$(this).tab('show')
+    			});
+    		});
+    	</script>
+    </body>
+</html>
