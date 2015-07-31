@@ -82,11 +82,11 @@
                             </div>
                             <label class="col-md-2 control-label" for="textinput">Tipo de Material</label>
                             <div class="col-md-3">
-                                <button class="btn btn-100 btn-default dropdown-toggle" type="button" id="menu1"
+                                <button class="btn btn-100 btn-default dropdown-toggle" type="button" id="tipoMaterial"
                                     data-toggle="dropdown">
                                     <span class="txt-drp">Seleccione</span> <span class="caret"></span>
                                 </button>
-                                <ul class="dropdown-menu dropdown-menu-100" role="menu" aria-labelledby="menu1">
+                                <ul class="dropdown-menu dropdown-menu-100" role="menu" aria-labelledby="tipoMaterial">
                                     <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Materia Prima</a></li>
                                     <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Producto Terminado</a></li>
                                     <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Componente</a></li>
@@ -145,9 +145,11 @@
         
         <script type="text/javascript">
     		$(document).ready(function() {
-    			$('#myTab a').click(function(e) {
-    				e.preventDefault()
-    				$(this).tab('show')
+    			$('.dropdown-menu li a').on('click', function() {
+    				var ul = $(this).closest('ul');
+    				var buttonId = ul.attr('aria-labelledby');
+    				var button = $('#' + buttonId);
+    				button.find('.txt-drp').text($(this).html());
     			});
     		});
     	</script>

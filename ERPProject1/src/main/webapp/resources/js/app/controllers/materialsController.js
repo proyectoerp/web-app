@@ -16,4 +16,28 @@ app.controller('materialsController', function($scope, materialsFactory, ngTable
 	        }
 	    });
 	}
+	
+	$scope.searchMaterials = function() {
+		var material = {
+			id: $scope.id,
+			name: $scope.name, 
+			description: $scope.description, 
+			unitOfMeasure: $scope.unitOfMeasure, 
+			lot: $scope.lot,
+			type: $scope.type
+		};
+		$scope.materials = materialsFactory.searchMaterials(material);
+	};
+	
+	$scope.addMaterial = function() {
+		var material = {
+			id: $scope.id,
+			name: $scope.name, 
+			description: $scope.description, 
+			unitOfMeasure: $scope.unitOfMeasure, 
+			lot: $scope.lot,
+			type: $scope.type
+		};
+		$scope.materials.push(material);
+	};
 });
