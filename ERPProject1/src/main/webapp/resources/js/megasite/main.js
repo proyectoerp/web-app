@@ -131,4 +131,10 @@ jQuery(document).ready(function($){
 			navigation.insertAfter('.cd-main-content');
 		}
 	}
+	
+	$('.cd-link').on('click', function(){
+		closeNav();
+		toggleSearch('close')
+		$('.cd-overlay').removeClass('is-visible');
+	});
 });

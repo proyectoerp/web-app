@@ -8,31 +8,31 @@
                <ul class="cd-nav-icons is-hidden">
                    <li class="go-back"><a href="#">Menu</a></li>
                    <li>
-                       <a class="cd-nav-item item-1" href="#">
+                       <a class="cd-nav-item item-1 cd-link" href="#/gestionMateriales">
                            <h3 class="h3-menu">Gestion de Material</h3>
                            <p>Gestion de Material</p>
                        </a>
                    </li>
                    <li>
-                       <a class="cd-nav-item item-2" href="#">
+                       <a class="cd-nav-item item-2 cd-link" href="#/gestionProveedor">
                            <h3 class="h3-menu">Gestion de Proveedor</h3>
                            <p>Gestion de Proveedor</p>
                        </a>
                    </li>
                    <li>
-                       <a class="cd-nav-item item-3" href="#">
+                       <a class="cd-nav-item item-3 cd-link" href="#/gestionClientes">
                            <h3 class="h3-menu">Gestion de Clientes</h3>
                            <p>Gestion de Clientes</p>
                        </a>
                    </li>
                    <li>
-                       <a class="cd-nav-item item-4" href="#">
+                       <a class="cd-nav-item item-4 cd-link" href="#/gestionCentros">
                            <h3 class="h3-menu">Gestion de Centros</h3>
                            <p>Gestion de Centros</p>
                        </a>
                    </li>
                    <li>
-                       <a class="cd-nav-item item-5" href="#">
+                       <a class="cd-nav-item item-5 cd-link" href="#/gestionFamilia">
                            <h3 class="h3-menu">Gestion de Familia</h3>
                            <p>Gestion de Familia</p>
                        </a>
@@ -44,31 +44,31 @@
                <ul class="cd-nav-icons is-hidden">
                    <li class="go-back"><a href="#0">Menu</a></li>
                    <li>
-                       <a class="cd-nav-item item-1" href="#">
+                       <a class="cd-nav-item item-1 cd-link" href="#/guiaEntrada">
                            <h3 class="h3-menu">Guia de Entrada</h3>
                            <p>Guia de Entrada</p>
                        </a>
                    </li>
                    <li>
-                       <a class="cd-nav-item item-2" href="#">
+                       <a class="cd-nav-item item-2 cd-link" href="#/guiaSalida">
                            <h3 class="h3-menu">Guia de Salida</h3>
                            <p>Guia de Salida</p>
                        </a>
                    </li>
                    <li>
-                       <a class="cd-nav-item item-3" href="#">
+                       <a class="cd-nav-item item-3 cd-link" href="#/transferencias">
                            <h3 class="h3-menu">Transferencias</h3>
                            <p>Transferencias</p>
                        </a>
                    </li>
                    <li>
-                       <a class="cd-nav-item item-4" href="#">
+                       <a class="cd-nav-item item-4 cd-link" href="#/mermas">
                            <h3 class="h3-menu">Mermas</h3>
                            <p>Mermas</p>
                        </a>
                    </li>
                    <li>
-                       <a class="cd-nav-item item-5" href="#">
+                       <a class="cd-nav-item item-5 cd-link" href="#/ajusteInventario">
                            <h3 class="h3-menu">Ajuste de Inventario</h3>
                            <p>Ajuste de Inventario</p>
                        </a>
@@ -80,31 +80,31 @@
                <ul class="cd-nav-icons is-hidden">
                    <li class="go-back"><a href="#0">Menu</a></li>
                    <li>
-                       <a class="cd-nav-item item-1" href="#">
+                       <a class="cd-nav-item item-1 cd-link" href="#/orderCompra">
                            <h3 class="h3-menu">Orden de Compra</h3>
                            <p>Orden de Compra</p>
                        </a>
                    </li>
                    <li>
-                       <a class="cd-nav-item item-2" href="#">
+                       <a class="cd-nav-item item-2 cd-link" href="#solicitudPedido">
                            <h3 class="h3-menu">Solicitud de Pedido/Cotizacion</h3>
                            <p>Solicitud de Pedido/Cotizacion</p>
                        </a>
                    </li>
                    <li>
-                       <a class="cd-nav-item item-3" href="#">
+                       <a class="cd-nav-item item-3 cd-link" href="#/ordenServicio">
                            <h3 class="h3-menu">Orden de Servicio</h3>
                            <p>Orden de Servicio</p>
                        </a>
                    </li>
                    <li>
-                       <a class="cd-nav-item item-4" href="#">
+                       <a class="cd-nav-item item-4 cd-link" href="#sugeridoCompra">
                            <h3 class="h3-menu">Sugerido de Compra</h3>
                            <p>Sugerido de Compra</p>
                        </a>
                    </li>
                    <li>
-                       <a class="cd-nav-item item-5" href="#">
+                       <a class="cd-nav-item item-5 cd-link" href="#importaciones">
                            <h3 class="h3-menu">Importaciones</h3>
                            <p>Importaciones</p>
                        </a>
@@ -116,43 +116,43 @@
                <ul class="cd-nav-icons is-hidden">
                    <li class="go-back"><a href="#0">Menu</a></li>
                    <li>
-                       <a class="cd-nav-item item-1" href="#">
+                       <a class="cd-nav-item item-1 cd-link" href="#/listaMateriales">
                            <h3 class="h3-menu">Lista de Materiales</h3>
                            <p>Lista de Materiales</p>
                        </a>
                    </li>
                    <li>
-                       <a class="cd-nav-item item-2" href="#">
+                       <a class="cd-nav-item item-2 cd-link" href="#/centroTrabajo">
                            <h3 class="h3-menu">Centros de Trabajo</h3>
                            <p>Centros de Trabajo</p>
                        </a>
                    </li>
                    <li>
-                       <a class="cd-nav-item item-3" href="#">
+                       <a class="cd-nav-item item-3 cd-link" href="#/rutaFabricacion">
                            <h3 class="h3-menu">Ruta de Fabricacion</h3>
                            <p>Ruta de Fabricacion</p>
                        </a>
                    </li>
                    <li>
-                       <a class="cd-nav-item item-4" href="#">
+                       <a class="cd-nav-item item-4 cd-link" href="#/planificadorNecesidades">
                            <h3 class="h3-menu">Planificador de Necesidades</h3>
                            <p>Planificador de Necesidades</p>
                        </a>
                    </li>
                    <li>
-                       <a class="cd-nav-item item-5" href="#">
+                       <a class="cd-nav-item item-5 cd-link" href="#/ordenesFabricacion">
                            <h3 class="h3-menu">Ordenes de Fabricacion</h3>
                            <p>Ordenes de Fabricacion</p>
                        </a>
                    </li>
                    <li>
-                       <a class="cd-nav-item item-6" href="#">
+                       <a class="cd-nav-item item-6 cd-link" href="#/planMaestroProduccion">
                            <h3 class="h3-menu">Plan Maestro de Produccion</h3>
                            <p>Plan Maestro de Produccion</p>
                        </a>
                    </li>
                    <li>
-                       <a class="cd-nav-item item-7" href="#">
+                       <a class="cd-nav-item item-7 cd-link" href="#/seguimientoOrdenFabricacion">
                            <h3 class="h3-menu">Seguimiento a Orden de Fabricacion</h3>
                            <p>Seguimiento a Orden de Fabricacion</p>
                        </a>
@@ -164,7 +164,7 @@
                <ul class="cd-nav-icons is-hidden">
                    <li class="go-back"><a href="#0">Menu</a></li>
                    <li>
-                       <a class="cd-nav-item item-1" href="#">
+                       <a class="cd-nav-item item-1" href="#/pedidoVenta">
                            <h3 class="h3-menu">Pedido de Venta</h3>
                            <p>Pedido de Venta</p>
                        </a>
