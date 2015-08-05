@@ -16,6 +16,9 @@ public class MaterialServiceImpl implements MaterialService{
 	@Override
 	public List<String> findByCriteria(String material) {
 		System.out.println("serivce");
+		
+		
+		
 		materialRepository.findByCriteria(material);
 		
 		return null;
