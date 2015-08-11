@@ -15,6 +15,14 @@ app.controller('materialsController', function($scope, materialsFactory, ngTable
 	            $defer.resolve($scope.materials.slice((params.page() - 1) * params.count(), params.page() * params.count()));
 	        }
 	    });
+		
+		$('.dropdown-menu li a').on('click', function(e) {
+			e.preventDefault();
+			var ul = $(this).closest('ul');
+			var buttonId = ul.attr('aria-labelledby');
+			var button = $('#' + buttonId);
+			button.find('.txt-drp').text($(this).html());
+		});
 	}
 	
 	$scope.searchMaterials = function() {

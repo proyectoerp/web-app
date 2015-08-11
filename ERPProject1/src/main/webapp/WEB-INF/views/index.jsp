@@ -29,7 +29,7 @@
     <body>
 		<%@ include file="menu.jspf" %>
 		
-		<div ng-view=""></div>
+		<div id="content" ui-view></div>
         
         <div class="cd-overlay"></div>
 
@@ -40,22 +40,12 @@
         <!-- Include all compiled plugins (below), or include individual files as needed -->
         <script src="<c:url value="/resources/js/bootstrap.min.js"/>"></script>
         <script src="<c:url value="/resources/js/angular/angular.min.js"/>"></script>
-        <script src="<c:url value="/resources/js/angular/angular-route.min.js"/>"></script>
+        <script src="<c:url value="/resources/js/angular/angular-ui-router.min.js"/>"></script>
 		<!-- Custom scripts -->
 		<script src="<c:url value="/resources/js/app/app.js"/>"></script>
 		<script src="<c:url value="/resources/js/app/controllers/materialsController.js"/>"></script>
 		<script src="<c:url value="/resources/js/app/factories/materialsFactory.js"/>"></script>
 		<script src="<c:url value="/resources/js/ng-table/ng-table.min.js"/>"></script>
         
-        <script type="text/javascript">
-    		$(document).ready(function() {
-    			$('.dropdown-menu li a').on('click', function() {
-    				var ul = $(this).closest('ul');
-    				var buttonId = ul.attr('aria-labelledby');
-    				var button = $('#' + buttonId);
-    				button.find('.txt-drp').text($(this).html());
-    			});
-    		});
-    	</script>
     </body>
 </html>

@@ -1,54 +1,43 @@
-var app = angular.module('erpApp', ['ngTable', 'ngRoute']);
+var app = angular.module('erpApp', ['ngTable', 'ui.router']);
 
-app.config(function($routeProvider, $locationProvider) {
-	$routeProvider.
-	when(
-		'/', 
-		{
-			controller: 'materialsController',
-			templateUrl: 'partials/gestionMateriales'
-		}
-	).
-	when(
-		'/gestionMateriales', 
-		{
-			controller: 'materialsController',
-			templateUrl: 'partials/gestionMateriales'
-		}
-	).
-	when(
-		'/guiaEntrada', 
-		{
-			controller: 'materialsController',
-			templateUrl: 'partials/guiaEntrada'
-		}
-	).
-	when(
-		'/listaMateriales', 
-		{
-			controller: 'materialsController',
-			templateUrl: 'partials/listaMateriales'
-		}
-	).
-	when(
-		'/centroTrabajo', 
-		{
-			controller: 'materialsController',
-			templateUrl: 'partials/centroTrabajo'
-		}
-	).
-	when(
-		'/rutaFabricacion', 
-		{
-			controller: 'materialsController',
-			templateUrl: 'partials/rutaFabricacion'
-		}
-	).
-	when(
-		'/planificadorNecesidades', 
-		{
-			controller: 'materialsController',
-			templateUrl: 'partials/planificadorNecesidades'
-		}
-	).otherwise({redirectTo: '/'});
-});
+app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider) {
+	$urlRouterProvider.otherwise('/');
+	
+	$stateProvider
+    .state('home', {
+        url:'/home',
+        templateUrl: 'partials/gestionMateriales',
+        controller: 'materialsController'
+    })
+    .state('gestionMateriales', {
+        url:'/gestionMateriales',
+        templateUrl: 'partials/gestionMateriales',
+        controller: 'materialsController'
+    })
+	.state('guiaEntrada', {
+		url:'/guiaEntrada',
+		controller: 'materialsController',
+		templateUrl: 'partials/guiaEntrada'
+	})
+	.state('listaMateriales', {
+		url:'/listaMateriales',
+		controller: 'materialsController',
+		templateUrl: 'partials/listaMateriales'
+	})
+	.state('centroTrabajo', {
+		url:'/centroTrabajo',
+		controller: 'materialsController',
+		templateUrl: 'partials/centroTrabajo'
+	})
+	.state('rutaFabricacion', {
+		url:'/rutaFabricacion',
+		controller: 'materialsController',
+		templateUrl: 'partials/rutaFabricacion'
+	})
+	.state('planificadorNecesidades', {
+		url:'/planificadorNecesidades',
+		controller: 'materialsController',
+		templateUrl: 'partials/planificadorNecesidades'
+	});
+	
+}]);
