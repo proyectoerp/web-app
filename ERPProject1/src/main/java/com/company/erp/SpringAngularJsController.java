@@ -26,7 +26,13 @@ public class SpringAngularJsController {
 	@RequestMapping(value = "/gestionMateriales", method = RequestMethod.GET)
 	public String displayMaterialsManagement(Locale locale, Model m) {
 		logger.info("in MaterialsManagement.", locale);
-		return "partials/gestionMateriales";
+		return "partials/gestionMateriales/buscar";
+	}
+	
+	@RequestMapping(value = "/agregarEditarMateriales", method = RequestMethod.GET)
+	public String addEditMaterialsManagement(Locale locale, Model m) {
+		logger.info("in addEditMaterialsManagement.", locale);
+		return "partials/gestionMateriales/agregarEditar";
 	}
 	
 	@RequestMapping(value = "/guiaEntrada", method = RequestMethod.GET)

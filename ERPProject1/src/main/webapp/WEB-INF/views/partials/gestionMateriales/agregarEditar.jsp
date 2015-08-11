@@ -242,7 +242,7 @@
         </div>
     </div>
     <div class="row pull-right">
-        <a href="#" class="btn btn-primary"><span class="glyphicon glyphicon-ok"></span> Grabar</a>
-        <a href="#" class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span> Cancelar</a>
+        <a ui-sref="gestionMateriales" class="btn btn-primary"><span class="glyphicon glyphicon-ok"></span> Grabar</a>
+        <a ui-sref="gestionMateriales" class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span> Cancelar</a>
     </div>
 </div>
