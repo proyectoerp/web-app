@@ -1,0 +1,24 @@
+.row-space {
+	margin-top: 20px;
+}
+.breadcrumb-whitebg {
+    background-color: #ffffff !important;
+    margin-bottom: 10px !important;
+    padding: 0px 15px;
+}
+.btn-100 {
+    width: 100%;
+}
+.btn-100 .txt-drp {
+    float: left;
+}
+.btn-100 .caret {
+    float: right;
+    margin-top: 8px;
+}
+.dropdown-menu-100 {
+    width: 100%;
+}
+.row-title .btn-title {
+    margin-top: 18px;
+}

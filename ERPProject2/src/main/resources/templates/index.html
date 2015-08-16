@@ -1,0 +1,47 @@
+<html lang="en" ng-app="erpApp" xmlns:th="http://www.thymeleaf.org">
+<head>
+<meta charset="utf-8"/>
+<meta http-equiv="X-UA-Compatible" content="IE=edge"/>
+<meta name="viewport" content="width=device-width, initial-scale=1"/>
+<!-- The above 3 meta tags *must* come first in the head; any other head content must come *after* these tags -->
+<title>ERP</title>
+
+<!-- Bootstrap -->
+    <link rel="stylesheet" th:href="@{/css/bootstrap.min.css}"/>
+    <link rel="stylesheet" th:href="@{/css/carousel.css}" />
+    <link rel="stylesheet" th:href="@{/css/megasite/reset.css}" /> <!-- CSS reset -->
+    <link rel="stylesheet" th:href="@{/css/megasite/style.css}" /> <!-- Resource style -->
+    <link rel="stylesheet" th:href="@{/css/ng-table/ng-table.min.css}" />
+    <link rel="stylesheet" th:href="@{/css/main.css}" />
+    <script th:src="@{/js/megasite/modernizr.js}"></script> <!-- Modernizr -->
+
+<!-- HTML5 shim and Respond.js for IE8 support of HTML5 elements and media queries -->
+<!-- WARNING: Respond.js doesn't work if you view the page via file:// -->
+<!--[if lt IE 9]>
+              <script src="https://oss.maxcdn.com/html5shiv/3.7.2/html5shiv.min.js"></script>
+              <script src="https://oss.maxcdn.com/respond/1.4.2/respond.min.js"></script>
+            <![endif]-->
+</head>
+    <body>
+		
+		<div th:replace="menu :: header">...</div>
+		<div id="content" ui-view=""></div>
+        
+        <div class="cd-overlay"></div>
+
+        <!-- jQuery (necessary for Bootstrap's JavaScript plugins) -->
+        <script th:src="@{/js/jquery/jquery-2.1.1.js}" ></script>
+        <script th:src="@{/js/jquery/jquery.mobile.custom.min.js}" ></script>
+        <script th:src="@{/js/megasite/main.js}" ></script> <!-- Resource jQuery -->
+        <!-- Include all compiled plugins (below), or include individual files as needed -->
+        <script th:src="@{/js/bootstrap.min.js}"></script>
+        <script th:src="@{/js/angular/angular.min.js}" ></script>
+        <script th:src="@{/js/angular/angular-ui-router.min.js}" ></script>
+		<!-- Custom scripts -->
+		<script th:src="@{/js/app/app.js}" ></script>
+		<script th:src="@{/js/app/controllers/materialsController.js}"></script>
+		<script th:src="@{/js/app/factories/materialsFactory.js}"></script>
+		<script th:src="@{/js/ng-table/ng-table.min.js}" ></script>
+        
+    </body>
+</html>
