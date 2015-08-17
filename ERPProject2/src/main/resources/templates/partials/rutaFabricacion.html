@@ -21,27 +21,34 @@
         <div class="panel-body">
             <form class="form-horizontal" role="form">
                 <div class="form-group">
-                    <label class="col-md-2 control-label" for="textinput">N° Ruta</label>
+                    <label class="col-md-2 control-label" for="textinput">N&deg; Ruta</label>
                     <div class="col-md-3">
-                        <input id="textinput" name="textinput" placeholder="N° Ruta" class="form-control input-md"
-                            type="text">
+                        <input id="textinput" name="textinput" placeholder="N&deg; Ruta" class="form-control input-md"
+                            type="text"/>
                     </div>
                     <label class="col-md-2 control-label" for="textinput">Descripcion</label>
                     <div class="col-md-3">
                         <input id="textinput" name="textinput" placeholder="Descripcion Corta"
-                            class="form-control input-md" type="text">
+                            class="form-control input-md" type="text"/>
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-md-2 control-label" for="textinput">Producto</label>
                     <div class="col-md-3">
                         <input id="textinput" name="textinput" placeholder="Producto" class="form-control input-md"
-                            type="text">
+                            type="text"/>
                     </div>
                     <label class="col-md-2 control-label" for="textinput">Lote</label>
                     <div class="col-md-3">
                         <input id="textinput" name="textinput" placeholder="Lote"
-                            class="form-control input-md" type="text">
+                            class="form-control input-md" type="text"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-2 control-label" for="textinput">Unidad de Medida</label>
+                    <div class="col-md-3">
+                        <input id="textinput" name="textinput" placeholder="Unidad de Medida" class="form-control input-md"
+                            type="text"/>
                     </div>
                 </div>
                 <div class="form-group">
@@ -56,10 +63,10 @@
     </div>
 
     <div role="tabpanel">
-        <table class="table table-hover table-condensed table-bordered">
+        <table ng-table="tableParams" class="table table-striped">
             <thead>
                 <tr>
-                    <th>N° Ruta</th>
+                    <th>N&deg; Ruta</th>
                     <th>Centro de Trabajo</th>
                     <th>Descripcion</th>
                     <th>Mano de Obra (H)</th>
@@ -67,26 +74,12 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                </tr>
-                <tr>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                </tr>
-                <tr>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
+                <tr ng-repeat="route in $data">
+                    <td>{{route.id}}</td>
+                    <td>{{route.workCenter}}</td>
+                    <td>{{route.description}}</td>
+                    <td>{{route.workforce}}</td>
+                    <td>{{route.indirectExpenses}}</td>
                 </tr>
             </tbody>
         </table>

@@ -36,7 +36,7 @@
                     <label class="col-md-2 control-label" for="textinput">Nro/Codigo</label>
                     <div class="col-md-3">
                         <input id="textinput" name="textinput" placeholder="Nro/Codigo"
-                            class="form-control input-md" type="text">
+                            class="form-control input-md" type="text"/>
                     </div>
                 </div>
                 <div class="form-group">
@@ -51,7 +51,7 @@
     </div>
 
     <div role="tabpanel">
-        <table class="table table-hover table-condensed table-bordered">
+        <table ng-table="tableParams" class="table table-striped">
             <thead>
                 <tr>
                     <th>Item</th>
@@ -62,26 +62,12 @@
                 </tr>
             </thead>
             <tbody>
-                <tr>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                </tr>
-                <tr>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                </tr>
-                <tr>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
-                    <td>&nbsp;</td>
+                <tr ng-repeat="planner in $data">
+                    <td>{{planner.id}}</td>
+                    <td>{{planner.product}}</td>
+                    <td>{{planner.description}}</td>
+                    <td>{{planner.quantity}}</td>
+                    <td>{{planner.unitOfMeasure}}</td>
                 </tr>
             </tbody>
         </table>

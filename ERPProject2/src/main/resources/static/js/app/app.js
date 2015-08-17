@@ -46,17 +46,17 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
 	})
 	.state('centroTrabajo', {
 		url:'/centroTrabajo',
-		controller: 'materialsController',
+		controller: 'workCentersController',
 		templateUrl: 'partials/centroTrabajo'
 	})
 	.state('rutaFabricacion', {
 		url:'/rutaFabricacion',
-		controller: 'materialsController',
+		controller: 'fabricationRoutesController',
 		templateUrl: 'partials/rutaFabricacion'
 	})
 	.state('planificadorNecesidades', {
 		url:'/planificadorNecesidades',
-		controller: 'materialsController',
+		controller: 'necesityPlannerController',
 		templateUrl: 'partials/planificadorNecesidades'
 	});
 	
