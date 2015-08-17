@@ -22,3 +22,6 @@
 .row-title .btn-title {
     margin-top: 18px;
 }
+.form-weight-normal label {
+	font-weight: normal;
+}

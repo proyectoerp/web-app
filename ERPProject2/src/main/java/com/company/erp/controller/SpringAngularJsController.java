@@ -40,7 +40,13 @@ public class SpringAngularJsController {
 	@RequestMapping(value = "/guiaEntrada", method = RequestMethod.GET)
 	public String displayInboundGuide(Locale locale, Model m) {
 		logger.info("in displayInboundGuide.", locale);
-		return "partials/guiaEntrada";
+		return "partials/guiaEntrada/buscar";
+	}
+	
+	@RequestMapping(value = "/agregarEditarGuiaEntrada", method = RequestMethod.GET)
+	public String addEditInboundGuide(Locale locale, Model m) {
+		logger.info("in addEditInboundGuide.", locale);
+		return "partials/guiaEntrada/agregarEditar";
 	}
 	
 	@RequestMapping(value = "/listaMateriales", method = RequestMethod.GET)

@@ -2,18 +2,18 @@
 <div class="container cd-main-content">
     <div class="row">
         <ul class="breadcrumb breadcrumb-whitebg">
-            <li><a href="#">Datos Maestros</a></li>
-            <li class="active">Gestion de Materiales</li>
+            <li><a href="#">Inventarios</a></li>
+            <li class="active">Guida de Entrada</li>
             </ul>
     </div>
     <div class="row row-title">
         <div class="col-md-9">
-            <h2 id="navbar-buttons">Gestion de Materiales</h2>
+            <h2 id="navbar-buttons">Guida de Entrada</h2>
         </div>
         <div class="col-md-3">
             <div class="pull-right btn-title">
                 <a href="#" class="btn btn-info"><span class="glyphicon glyphicon-search"></span> Buscar</a>
-                <a ui-sref="agregarMateriales" class="btn btn-success"><span class="glyphicon glyphicon-plus"></span> Agregar</a>
+                <a ui-sref="agregarGuiaEntrada" class="btn btn-success"><span class="glyphicon glyphicon-plus"></span> Agregar</a>
             </div>
         </div>
     </div>
@@ -86,12 +86,12 @@
                 </tr>
             </thead>
             <tbody>
-                <tr ng-repeat="material in $data">
-                    <td>{{material.id}}</td>
-                    <td>{{material.name}}</td>
-                    <td>{{material.description}}</td>
-                    <td>{{material.unitOfMeasure}}</td>
-                    <td>{{material.lot}}</td>
+                <tr ng-repeat="guia in $data">
+                    <td>{{guia.id}}</td>
+                    <td>{{guia.name}}</td>
+                    <td>{{guia.description}}</td>
+                    <td>{{guia.unitOfMeasure}}</td>
+                    <td>{{guia.lot}}</td>
                 </tr>
             </tbody>
         </table>

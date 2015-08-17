@@ -11,6 +11,7 @@ app.controller('materialsController', function($scope, materialsFactory, ngTable
 	        count: 5           // count per page
 	    }, {
 	        total: $scope.materials.length, // length of data
+	        counts: [],
 	        getData: function ($defer, params) {
 	            $defer.resolve($scope.materials.slice((params.page() - 1) * params.count(), params.page() * params.count()));
 	        }
@@ -23,6 +24,8 @@ app.controller('materialsController', function($scope, materialsFactory, ngTable
 			var button = $('#' + buttonId);
 			button.find('.txt-drp').text($(this).html());
 		});
+		
+		$('.datetimepicker').datetimepicker();
 	}
 	
 	$scope.searchMaterials = function() {
