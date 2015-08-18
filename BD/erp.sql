@@ -82,7 +82,7 @@ CREATE TABLE material (
    Descripcion  varchar (50),
    Direccion  varchar (50),
    Estado  varchar (50),
-   TipoCentro  varchar (50),
+   Tipo_Centro  varchar (50),
    Telefono  varchar (50)
    );
    

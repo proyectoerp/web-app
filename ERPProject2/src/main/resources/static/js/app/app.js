@@ -24,6 +24,21 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
         templateUrl: 'partials/agregarEditarMateriales',
         controller: 'materialsController'
     })
+    .state('gestionCentros', {
+        url:'/gestionCentros',
+        templateUrl: 'partials/gestionCentros',
+        controller: 'centersController'
+    })
+    .state('agregarCentros', {
+        url:'/agregarEditarCentros',
+        templateUrl: 'partials/agregarEditarCentros',
+        controller: 'centersController'
+    })
+    .state('editarCentros', {
+        url:'/agregarEditarCentros',
+        templateUrl: 'partials/agregarEditarCentros',
+        controller: 'centersController'
+    })
 	.state('guiaEntrada', {
 		url:'/guiaEntrada',
 		controller: 'materialsController',

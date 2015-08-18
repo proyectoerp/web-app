@@ -1,0 +1,90 @@
+
+<div class="container cd-main-content">
+    <div class="row">
+        <ul class="breadcrumb breadcrumb-whitebg">
+            <li><a href="#">Datos Maestros</a></li>
+            <li class="active">Gestion de Centros</li>
+            </ul>
+    </div>
+    <div class="row row-title">
+        <div class="col-md-9">
+            <h2 id="navbar-buttons">Gestion de Centros</h2>
+        </div>
+        <div class="col-md-3">
+            <div class="pull-right btn-title">
+                <a href="#" class="btn btn-info"><span class="glyphicon glyphicon-search"></span> Buscar</a>
+                <a ui-sref="agregarCentros" class="btn btn-success"><span class="glyphicon glyphicon-plus"></span> Agregar</a>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="panel-body">
+            <form class="form-horizontal" role="form">
+                <div class="form-group form-weight-normal">
+                    <label class="col-md-2 control-label" for="textinput">Codigo</label>
+                    <div class="col-md-3">
+                        <input id="textinput" name="textinput" placeholder="Codigo" class="form-control input-md"
+                            type="text"/>
+                    </div>
+                    <label class="col-md-2 control-label" for="textinput">Descripcion Corta</label>
+                    <div class="col-md-3">
+                        <input id="textinput" name="textinput" placeholder="Descripcion Corta"
+                            class="form-control input-md" type="text"/>
+                    </div>
+                </div>
+                <div class="form-group form-weight-normal">
+                    <label class="col-md-2 control-label" for="textinput">Tipo de Centro</label>
+                    <div class="col-md-3">
+                        <button class="btn btn-100 btn-default dropdown-toggle" type="button" id="tipoCentro"
+                            data-toggle="dropdown">
+                            <span class="txt-drp">Seleccione</span> <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-100" role="menu" aria-labelledby="tipoCentro">
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Punto de Venta</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Almacen</a></li>
+                        </ul>
+                    </div>
+                    <label class="col-md-2 control-label" for="textinput">Estado</label>
+                    <div class="col-md-3">
+                        <button class="btn btn-100 btn-default dropdown-toggle" type="button" id="estado"
+                            data-toggle="dropdown">
+                            <span class="txt-drp">Seleccione</span> <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-100" role="menu" aria-labelledby="estado">
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Activo</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Inactivo</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <div class="col-md-5">
+                    </div>
+                    <div class="col-md-5">
+                        
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div role="tabpanel" class="table-responsive">
+        <table ng-table="tableParams" class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Codigo</th>
+                    <th>Descripcion Corta</th>
+                    <th>Tipo Centro	</th>
+                    <th>Estado</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="centro in $data">
+                    <td>{{centro.id}}</td>
+                    <td>{{centro.description}}</td>
+                    <td>{{centro.centerType}}</td>
+                    <td>{{centro.status}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

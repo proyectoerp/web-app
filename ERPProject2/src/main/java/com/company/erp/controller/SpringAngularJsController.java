@@ -37,6 +37,18 @@ public class SpringAngularJsController {
 		return "partials/gestionMateriales/agregarEditar";
 	}
 	
+	@RequestMapping(value = "/gestionCentros", method = RequestMethod.GET)
+	public String displayCentersManagement(Locale locale, Model m) {
+		logger.info("in displayCentersManagement.", locale);
+		return "partials/gestionCentros/buscar";
+	}
+	
+	@RequestMapping(value = "/agregarEditarCentros", method = RequestMethod.GET)
+	public String addEditCenters(Locale locale, Model m) {
+		logger.info("in addEditCenters.", locale);
+		return "partials/gestionCentros/agregarEditar";
+	}
+	
 	@RequestMapping(value = "/guiaEntrada", method = RequestMethod.GET)
 	public String displayInboundGuide(Locale locale, Model m) {
 		logger.info("in displayInboundGuide.", locale);
