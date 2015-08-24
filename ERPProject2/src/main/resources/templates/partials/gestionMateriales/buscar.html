@@ -21,33 +21,9 @@
         <div class="panel-body">
             <form class="form-horizontal" role="form">
                 <div class="form-group form-weight-normal">
-                    <label class="col-md-2 control-label" for="textinput">N&deg; Formulacion</label>
+                    <label class="col-md-2 control-label" for="textinput">Codigo de Material</label>
                     <div class="col-md-3">
-                        <input id="textinput" name="textinput" placeholder="N&deg; Formulacion" class="form-control input-md"
-                            type="text"/>
-                    </div>
-                    <label class="col-md-2 control-label" for="textinput">Descripcion</label>
-                    <div class="col-md-3">
-                        <input id="textinput" name="textinput" placeholder="Descripcion Corta"
-                            class="form-control input-md" type="text"/>
-                    </div>
-                </div>
-                <div class="form-group form-weight-normal">
-                    <label class="col-md-2 control-label" for="textinput">Producto</label>
-                    <div class="col-md-3">
-                        <input id="textinput" name="textinput" placeholder="Producto" class="form-control input-md"
-                            type="text"/>
-                    </div>
-                    <label class="col-md-2 control-label" for="textinput">Lote</label>
-                    <div class="col-md-3">
-                        <input id="textinput" name="textinput" placeholder="Lote"
-                            class="form-control input-md" type="text"/>
-                    </div>
-                </div>
-                <div class="form-group form-weight-normal">
-                    <label class="col-md-2 control-label" for="textinput">Unidad Medida</label>
-                    <div class="col-md-3">
-                        <input id="textinput" name="textinput" placeholder="Unidad Medida" class="form-control input-md"
+                        <input id="textinput" name="textinput" placeholder="Codigo de Material" class="form-control input-md"
                             type="text"/>
                     </div>
                     <label class="col-md-2 control-label" for="textinput">Tipo de Material</label>
@@ -60,6 +36,31 @@
                             <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Materia Prima</a></li>
                             <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Producto Terminado</a></li>
                             <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Componente</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="form-group form-weight-normal">
+                    <label class="col-md-2 control-label" for="textinput">Familia</label>
+                    <div class="col-md-3">
+                        <input id="textinput" name="textinput" placeholder="Familia" class="form-control input-md"
+                            type="text"/>
+                    </div>
+                    <label class="col-md-2 control-label" for="textinput">Descripcion</label>
+                    <div class="col-md-3">
+                        <input id="textinput" name="textinput" placeholder="Descripcion"
+                            class="form-control input-md" type="text"/>
+                    </div>
+                </div>
+                <div class="form-group form-weight-normal">
+                    <label class="col-md-2 control-label" for="textinput">Estado</label>
+                    <div class="col-md-3">
+                        <button class="btn btn-100 btn-default dropdown-toggle" type="button" id="tipoMaterial"
+                            data-toggle="dropdown">
+                            <span class="txt-drp">Seleccione</span> <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-100" role="menu" aria-labelledby="tipoMaterial">
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Activo</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Inactivo</a></li>
                         </ul>
                     </div>
                 </div>
@@ -78,11 +79,12 @@
         <table ng-table="tableParams" class="table table-striped">
             <thead>
                 <tr>
-                    <th>N° Formulacion</th>
-                    <th>Material</th>
+                    <th>Codigo Material</th>
                     <th>Descripcion</th>
-                    <th>Unidad Medida</th>
-                    <th>Lote</th>
+                    <th>Tipo Material</th>
+                    <th>Familia</th>
+                    <th>UMB</th>
+                    <th>Estado</th>
                 </tr>
             </thead>
             <tbody>
@@ -91,6 +93,7 @@
                     <td>{{material.name}}</td>
                     <td>{{material.description}}</td>
                     <td>{{material.unitOfMeasure}}</td>
+                    <td>{{material.lot}}</td>
                     <td>{{material.lot}}</td>
                 </tr>
             </tbody>

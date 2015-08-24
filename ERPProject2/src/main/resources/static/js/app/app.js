@@ -45,7 +45,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
 		templateUrl: 'partials/guiaEntrada'
 	})
 	.state('agregarGuiaEntrada', {
-		url:'/guiaEntrada',
+		url:'/agregarGuiaEntrada',
 		controller: 'materialsController',
 		templateUrl: 'partials/agregarEditarGuiaEntrada'
 	})

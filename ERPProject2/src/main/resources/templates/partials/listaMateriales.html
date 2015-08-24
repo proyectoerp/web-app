@@ -22,9 +22,9 @@
         <div class="panel-body">
             <form class="form-horizontal" role="form">
                 <div class="form-group">
-                    <label class="col-md-2 control-label" for="textinput">N° Formulacion</label>
+                    <label class="col-md-2 control-label" for="textinput">N&deg; Receta</label>
                     <div class="col-md-3">
-                        <input id="textinput" name="textinput" placeholder="N° Formulacion" class="form-control input-md"
+                        <input id="textinput" name="textinput" placeholder="N&deg; Receta" class="form-control input-md"
                             type="text"/>
                     </div>
                     <label class="col-md-2 control-label" for="textinput">Descripcion</label>
@@ -34,21 +34,9 @@
                     </div>
                 </div>
                 <div class="form-group">
-                    <label class="col-md-2 control-label" for="textinput">Producto</label>
+                    <label class="col-md-2 control-label" for="textinput">Material</label>
                     <div class="col-md-3">
-                        <input id="textinput" name="textinput" placeholder="Producto" class="form-control input-md"
-                            type="text"/>
-                    </div>
-                    <label class="col-md-2 control-label" for="textinput">Lote</label>
-                    <div class="col-md-3">
-                        <input id="textinput" name="textinput" placeholder="Lote"
-                            class="form-control input-md" type="text"/>
-                    </div>
-                </div>
-                <div class="form-group">
-                    <label class="col-md-2 control-label" for="textinput">Unidad Medida</label>
-                    <div class="col-md-3">
-                        <input id="textinput" name="textinput" placeholder="Unidad Medida" class="form-control input-md"
+                        <input id="textinput" name="textinput" placeholder="Material" class="form-control input-md"
                             type="text"/>
                     </div>
                     <label class="col-md-2 control-label" for="textinput">Tipo de Material</label>
@@ -58,7 +46,6 @@
                             <span class="txt-drp">Seleccione</span> <span class="caret"></span>
                         </button>
                         <ul class="dropdown-menu dropdown-menu-100" role="menu" aria-labelledby="tipoMaterial">
-                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Materia Prima</a></li>
                             <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Producto Terminado</a></li>
                             <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Componente</a></li>
                         </ul>
@@ -76,10 +63,10 @@
     </div>
 
     <div role="tabpanel">
-        <table ng-table="tableParams" class="table table-hover table-condensed table-bordered">
+        <table ng-table="tableParams" class="table table-striped">
             <thead>
                 <tr>
-                    <th>N° Formulacion</th>
+                    <th>N&deg; Receta</th>
                     <th>Material</th>
                     <th>Descripcion</th>
                     <th>Unidad Medida</th>

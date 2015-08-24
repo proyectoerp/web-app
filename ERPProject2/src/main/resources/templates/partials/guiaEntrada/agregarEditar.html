@@ -3,12 +3,13 @@
     <div class="row">
         <ul class="breadcrumb breadcrumb-whitebg">
             <li><a href="#">Inventario</a></li>
-            <li class="active">Guia de Entrada</li>
+            <li><a ui-sref="guiaEntrada">Guia de Entrada</a></li>
+            <li class="active">Nueva Guia de Entrada</li>
             </ul>
     </div>
     <div class="row row-title">
         <div class="col-md-9">
-            <h2 id="navbar-buttons">Guia de Entrada</h2>
+            <h2 id="navbar-buttons">Nueva Guia de Entrada</h2>
         </div>
         <div class="col-md-3">
             <div class="pull-right btn-title">
@@ -180,4 +181,9 @@
             </div>
         </div>
     </div>
+    
+    <div class="row pull-right">
+	    <a ui-sref="guiaEntrada" class="btn btn-primary"><span class="glyphicon glyphicon-ok"></span> Grabar</a>
+        <a ui-sref="guiaEntrada" class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span> Cancelar</a>
+	</div>
 </div>
