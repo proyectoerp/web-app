@@ -1,20 +1,19 @@
 
-
 <div class="container cd-main-content">
     <div class="row">
         <ul class="breadcrumb breadcrumb-whitebg">
             <li><a href="#">Produccion</a></li>
-            <li class="active">Lista de Materiales</li>
+            <li class="active">Ruta de Fabricacion</li>
             </ul>
     </div>
     <div class="row row-title">
         <div class="col-md-9">
-            <h2 id="navbar-buttons">Lista de Materiales</h2>
+            <h2 id="navbar-buttons">Ruta de Fabricacion</h2>
         </div>
         <div class="col-md-3">
             <div class="pull-right btn-title">
                 <a href="#" class="btn btn-info"><span class="glyphicon glyphicon-search"></span> Buscar</a>
-                <a href="#" class="btn btn-success"><span class="glyphicon glyphicon-plus"></span> Agregar</a>
+                <a ui-sref="agregarRutaFabricacion" class="btn btn-success"><span class="glyphicon glyphicon-plus"></span> Agregar</a>
             </div>
         </div>
     </div>
@@ -22,9 +21,9 @@
         <div class="panel-body">
             <form class="form-horizontal" role="form">
                 <div class="form-group">
-                    <label class="col-md-2 control-label" for="textinput">N&deg; Receta</label>
+                    <label class="col-md-2 control-label" for="textinput">N&deg; Ruta de Fabricacion</label>
                     <div class="col-md-3">
-                        <input id="textinput" name="textinput" placeholder="N&deg; Receta" class="form-control input-md"
+                        <input id="textinput" name="textinput" placeholder="N&deg; Ruta de Fabricacion" class="form-control input-md"
                             type="text"/>
                     </div>
                     <label class="col-md-2 control-label" for="textinput">Descripcion</label>
@@ -38,17 +37,6 @@
                     <div class="col-md-3">
                         <input id="textinput" name="textinput" placeholder="Material" class="form-control input-md"
                             type="text"/>
-                    </div>
-                    <label class="col-md-2 control-label" for="textinput">Tipo de Material</label>
-                    <div class="col-md-3">
-                        <button class="btn btn-100 btn-default dropdown-toggle" type="button" id="tipoMaterial"
-                            data-toggle="dropdown">
-                            <span class="txt-drp">Seleccione</span> <span class="caret"></span>
-                        </button>
-                        <ul class="dropdown-menu dropdown-menu-100" role="menu" aria-labelledby="tipoMaterial">
-                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Producto Terminado</a></li>
-                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Componente</a></li>
-                        </ul>
                     </div>
                 </div>
                 <div class="form-group">
@@ -66,20 +54,20 @@
         <table ng-table="tableParams" class="table table-striped">
             <thead>
                 <tr>
-                    <th>N&deg; Receta</th>
+                    <th>N&deg; Ruta</th>
                     <th>Material</th>
-                    <th>Descripcion</th>
                     <th>Unidad Medida</th>
                     <th>Lote</th>
+                    <th>N&deg; Centros de Trabajo</th>
                 </tr>
             </thead>
             <tbody>
-                <tr ng-repeat="material in $data">
-                    <td>{{material.id}}</td>
-                    <td>{{material.name}}</td>
-                    <td>{{material.description}}</td>
-                    <td>{{material.unitOfMeasure}}</td>
-                    <td>{{material.lot}}</td>
+                <tr ng-repeat="route in $data">
+                    <td>{{route.id}}</td>
+                    <td>{{route.workCenter}}</td>
+                    <td>{{route.description}}</td>
+                    <td>{{route.workforce}}</td>
+                    <td>{{route.indirectExpenses}}</td>
                 </tr>
             </tbody>
         </table>

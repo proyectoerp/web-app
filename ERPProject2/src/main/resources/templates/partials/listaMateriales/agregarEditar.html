@@ -1,0 +1,74 @@
+
+<div class="container cd-main-content">
+    <div class="row">
+        <ul class="breadcrumb breadcrumb-whitebg">
+            <li><a href="#">Produccion</a></li>
+            <li><a ui-sref="listaMateriales">Lista de Materiales</a></li>
+            <li class="active">Agregar Lista de Materiales</li>
+            </ul>
+    </div>
+    <div class="row row-title">
+        <div class="col-md-9">
+            <h2 id="navbar-buttons">Agregar Lista de Materiales</h2>
+        </div>
+        <div class="col-md-3">
+        </div>
+    </div>
+    <div class="panel">
+        <div class="panel-body">
+            <form class="form-horizontal" role="form">
+                <div class="form-group">
+                    <label class="col-md-2 control-label" for="textinput">N&deg; Receta</label>
+                    <div class="col-md-3">
+                        <input id="textinput" name="textinput" placeholder="N&deg; Receta"
+                            class="form-control input-md" type="text"/>
+                    </div>
+                    <label class="col-md-2 control-label" for="textinput">Descripcion Corta</label>
+                    <div class="col-md-3">
+                    	<input id="textinput" name="textinput" placeholder="Descripcion Corta"
+                             class="form-control input-md" type="text"/>
+                	</div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-2 control-label" for="textinput">Material</label>
+                    <div class="col-md-3">
+                        <input id="textinput" name="textinput" placeholder="Material" class="form-control input-md"
+                            type="text"/>
+                    </div>
+                    <label class="col-md-2 control-label" for="textinput">Tipo de Material</label>
+                    <div class="col-md-3">
+                        <button class="btn btn-100 btn-default dropdown-toggle" type="button" id="tipoMaterial"
+	                      data-toggle="dropdown">
+	                      <span class="txt-drp">Seleccione</span> <span class="caret"></span>
+	                    </button>
+	                    <ul class="dropdown-menu dropdown-menu-100" role="menu" aria-labelledby="tipoMaterial">
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Producto Terminado</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Componente</a></li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-2 control-label" for="textinput">Unidad de Medida</label>
+                    <div class="col-md-3">
+                        <button class="btn btn-100 btn-default dropdown-toggle" type="button" id="unidadMedida"
+	                      data-toggle="dropdown">
+	                      <span class="txt-drp">Seleccione</span> <span class="caret"></span>
+	                    </button>
+	                    <ul class="dropdown-menu dropdown-menu-100" role="menu" aria-labelledby="unidadMedida">
+                        </ul>
+                    </div>
+                    <label class="col-md-2 control-label" for="textinput">Lote</label>
+                    <div class="col-md-3">
+                        <input id="textinput" name="textinput" placeholder="Lote"
+                            class="form-control input-md" type="text"/>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="row pull-right">
+        <a ui-sref="listaMateriales" class="btn btn-primary"><span class="glyphicon glyphicon-ok"></span> Grabar</a>
+        <a ui-sref="listaMateriales" class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span> Cancelar</a>
+    </div>
+</div>

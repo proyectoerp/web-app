@@ -22,8 +22,14 @@
                 <div class="form-group">
                     <label class="col-md-2 control-label" for="textinput">Tipo de Documento</label>
                     <div class="col-md-3">
-                        <input id="textinput" name="textinput" placeholder="Tipo de Documento" class="form-control input-md"
-                            type="text"/>
+                        <button class="btn btn-100 btn-default dropdown-toggle" type="button" id="tipoDocumento"
+                            data-toggle="dropdown">
+                            <span class="txt-drp">Seleccione</span> <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-100" role="menu" aria-labelledby="tipoDocumento">
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Orden de Compra</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Orden de Fabricacion</a></li>
+                        </ul>
                     </div>
                     <label class="col-md-2 control-label" for="textinput">Nro de Documento</label>
                     <div class="col-md-3">

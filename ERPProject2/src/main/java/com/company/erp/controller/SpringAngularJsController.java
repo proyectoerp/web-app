@@ -67,24 +67,48 @@ public class SpringAngularJsController {
 		
 		formulaService.findByCriteria("QUE tal");
 		
-		return "partials/listaMateriales";
+		return "partials/listaMateriales/buscar";
+	}
+	
+	@RequestMapping(value = "/agregarEditarListaMateriales", method = RequestMethod.GET)
+	public String addEditMaterialsList(Locale locale, Model m) {
+		logger.info("in addEditMaterialsList.", locale);
+		return "partials/listaMateriales/agregarEditar";
 	}
 	
 	@RequestMapping(value = "/centroTrabajo", method = RequestMethod.GET)
 	public String displayWorkCenter(Locale locale, Model m) {
 		logger.info("in displayWorkCenter.", locale);
-		return "partials/centroTrabajo";
+		return "partials/centroTrabajo/buscar";
+	}
+	
+	@RequestMapping(value = "/agregarEditarCentroTrabajo", method = RequestMethod.GET)
+	public String addEditWorkCenter(Locale locale, Model m) {
+		logger.info("in addEditWorkCenter.", locale);
+		return "partials/centroTrabajo/agregarEditar";
 	}
 	
 	@RequestMapping(value = "/rutaFabricacion", method = RequestMethod.GET)
 	public String displayFabricationRoute(Locale locale, Model m) {
 		logger.info("in displayFabricationRoute.", locale);
-		return "partials/rutaFabricacion";
+		return "partials/rutaFabricacion/buscar";
+	}
+	
+	@RequestMapping(value = "/agregarEditarRutaFabricacion", method = RequestMethod.GET)
+	public String addEditFabricationRoute(Locale locale, Model m) {
+		logger.info("in addEditFabricationRoute.", locale);
+		return "partials/rutaFabricacion/agregarEditar";
 	}
 	
 	@RequestMapping(value = "/planificadorNecesidades", method = RequestMethod.GET)
 	public String displayNecesityPlanner(Locale locale, Model m) {
 		logger.info("in displayNecesityPlanner.", locale);
-		return "partials/planificadorNecesidades";
+		return "partials/planificadorNecesidades/buscar";
+	}
+	
+	@RequestMapping(value = "/agregarEditarPlanificadorNecesidades", method = RequestMethod.GET)
+	public String addEditNecesityPlanner(Locale locale, Model m) {
+		logger.info("in addEditNecesityPlanner.", locale);
+		return "partials/planificadorNecesidades/agregarEditar";
 	}
 }

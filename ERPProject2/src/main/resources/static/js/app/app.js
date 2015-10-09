@@ -59,20 +59,60 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
 		controller: 'materialsController',
 		templateUrl: 'partials/listaMateriales'
 	})
+	.state('agregarListaMateriales', {
+		url:'/agregarListaMateriales',
+		controller: 'materialsController',
+		templateUrl: 'partials/agregarEditarListaMateriales'
+	})
+	.state('editarListaMateriales', {
+		url:'/editarListaMateriales',
+		controller: 'materialsController',
+		templateUrl: 'partials/agregarEditarListaMateriales'
+	})
 	.state('centroTrabajo', {
 		url:'/centroTrabajo',
 		controller: 'workCentersController',
 		templateUrl: 'partials/centroTrabajo'
+	})
+	.state('agregarCentroTrabajo', {
+		url:'/agregarCentroTrabajo',
+		controller: 'workCentersController',
+		templateUrl: 'partials/agregarEditarCentroTrabajo'
+	})
+	.state('editarCentroTrabajo', {
+		url:'/editarCentroTrabajo',
+		controller: 'workCentersController',
+		templateUrl: 'partials/agregarEditarCentroTrabajo'
 	})
 	.state('rutaFabricacion', {
 		url:'/rutaFabricacion',
 		controller: 'fabricationRoutesController',
 		templateUrl: 'partials/rutaFabricacion'
 	})
+	.state('agregarRutaFabricacion', {
+		url:'/agregarRutaFabricacion',
+		controller: 'fabricationRoutesController',
+		templateUrl: 'partials/agregarEditarRutaFabricacion'
+	})
+	.state('editarRutaFabricacion', {
+		url:'/editarRutaFabricacion',
+		controller: 'fabricationRoutesController',
+		templateUrl: 'partials/agregarEditarRutaFabricacion'
+	})
 	.state('planificadorNecesidades', {
 		url:'/planificadorNecesidades',
 		controller: 'necesityPlannerController',
 		templateUrl: 'partials/planificadorNecesidades'
+	})
+	.state('agregarPlanificadorNecesidades', {
+		url:'/agregarPlanificadorNecesidades',
+		controller: 'necesityPlannerController',
+		templateUrl: 'partials/agregarEditarPlanificadorNecesidades'
+	})
+	.state('agregarEditarPlanificadorNecesidades', {
+		url:'/editarPlanificadorNecesidades',
+		controller: 'necesityPlannerController',
+		templateUrl: 'partials/agregarEditarPlanificadorNecesidades'
 	});
 	
 }]);
