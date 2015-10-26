@@ -1,0 +1,96 @@
+
+
+<div class="container cd-main-content">
+    <div class="row">
+        <ul class="breadcrumb breadcrumb-whitebg">
+            <li><a href="#">Produccion</a></li>
+            <li><a ui-sref="centroTrabajo">Centros de Trabajo</a></li>
+            <li class="active">Nuevo Centro de Trabajo</li>
+            </ul>
+    </div>
+    <div class="row row-title">
+        <div class="col-md-9">
+            <h2 id="navbar-buttons">Nuevo Centro de Trabajo</h2>
+        </div>
+        <div class="col-md-3">
+        </div>
+    </div>
+    <div class="panel">
+        <div class="panel-body">
+            <form class="form-horizontal" role="form">
+                <div class="form-group">
+                    <label class="col-md-2 control-label" for="textinput">N&deg; Centro de Trabajo</label>
+                    <div class="col-md-3">
+                        <input id="textinput" name="textinput" placeholder="N&deg; Centro de Trabajo" class="form-control input-md"
+                            type="text"/>
+                    </div>
+                    <label class="col-md-2 control-label" for="textinput">Descripcion</label>
+                    <div class="col-md-3">
+                        <input id="textinput" name="textinput" placeholder="Descripcion"
+                            class="form-control input-md" type="text"/>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div role="tabpanel">
+
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active"><a href="#manoObra" aria-controls="compras" role="tab" data-toggle="tab">Mano de Obra</a></li>
+            <li role="presentation"><a href="#gastosIndirectos" aria-controls="ventas" role="tab" data-toggle="tab">Gastos Indirectos</a></li>
+        </ul>
+
+        <!-- Tab panes -->
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="manoObra">
+                <div class="row clearfix row-space">
+                    <form class="form-horizontal" role="form">
+						<div class="form-group">
+							<label class="col-md-2 control-label" for="textinput">N&deg; Obreros</label>
+							<div class="col-md-3">
+								<input id="textinput" name="textinput" placeholder="N&deg; Obreros"
+									class="form-control input-md" type="text" />
+							</div>
+							<label class="col-md-2 control-label" for="textinput">Jornada Laboral</label>
+							<div class="col-md-3">
+								<input id="textinput" name="textinput" placeholder="Jornada Laboral"
+									class="form-control input-md" type="text" />
+							</div>
+						</div>
+						<div class="form-group">
+							<label class="col-md-2 control-label" for="textinput">Costo por Obrero</label>
+							<div class="col-md-3">
+								<input id="textinput" name="textinput" placeholder="Costo por Obrero"
+									class="form-control input-md" type="text" />
+							</div>
+						</div>
+					</form>
+                </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="gastosIndirectos">
+                <div class="row clearfix row-space">
+                    <form class="form-horizontal" role="form">
+                        <div class="form-group">
+							<label class="col-md-2 control-label" for="textinput">N&deg; Maquinas</label>
+							<div class="col-md-3">
+								<input id="textinput" name="textinput" placeholder="N&deg; Maquinas"
+									class="form-control input-md" type="text" />
+							</div>
+							<label class="col-md-2 control-label" for="textinput">Gastos Varios (%)</label>
+							<div class="col-md-3">
+								<input id="textinput" name="textinput" placeholder="Gastos Varios (%)"
+									class="form-control input-md" type="text" />
+							</div>
+						</div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="row pull-right">
+        <a ui-sref="centroTrabajo" class="btn btn-primary"><span class="glyphicon glyphicon-ok"></span> Grabar</a>
+        <a ui-sref="centroTrabajo" class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span> Cancelar</a>
+    </div>
+</div>

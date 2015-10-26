@@ -113,6 +113,12 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
 		url:'/editarPlanificadorNecesidades',
 		controller: 'necesityPlannerController',
 		templateUrl: 'partials/agregarEditarPlanificadorNecesidades'
+	})
+	.state('familia', {
+		url:'/familia',
+		controller: 'familyController',
+		templateUrl: 'partials/familia'
 	});
+	
 	
 }]);

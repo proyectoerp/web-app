@@ -111,4 +111,10 @@ public class SpringAngularJsController {
 		logger.info("in addEditNecesityPlanner.", locale);
 		return "partials/planificadorNecesidades/agregarEditar";
 	}
+	
+	@RequestMapping(value = "/familia", method = RequestMethod.GET)
+	public String displayFamily(Locale locale, Model m) {
+		logger.info("in displayFamily.", locale);
+		return "partials/familia/buscar";
+	}
 }
