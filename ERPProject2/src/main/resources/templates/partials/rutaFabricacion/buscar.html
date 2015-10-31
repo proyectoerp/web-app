@@ -55,10 +55,12 @@
             <thead>
                 <tr>
                     <th>N&deg; Ruta</th>
-                    <th>Material</th>
-                    <th>Unidad Medida</th>
-                    <th>Lote</th>
-                    <th>N&deg; Centros de Trabajo</th>
+                    <th>Centro de Trabajo</th>
+                    <th>Descripion</th>
+                    <th>Proceso Externo</th>
+                    <th>Mano de Obra (h)</th>
+                    <th>Gastos Indirectos (%)</th>
+                    <th>Costo Fijo</th>
                 </tr>
             </thead>
             <tbody>
@@ -66,8 +68,10 @@
                     <td>{{route.id}}</td>
                     <td>{{route.workCenter}}</td>
                     <td>{{route.description}}</td>
+                    <td>{{route.externalProcess}}</td>
                     <td>{{route.workforce}}</td>
                     <td>{{route.indirectExpenses}}</td>
+                    <td>{{route.fixedCost}}</td>
                 </tr>
             </tbody>
         </table>
