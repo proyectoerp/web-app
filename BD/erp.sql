@@ -98,6 +98,52 @@ CREATE TABLE material (
    FOREIGN KEY (material_id) REFERENCES material(id),
    FOREIGN KEY (centro_id) REFERENCES centro(id)
    );
+   
+   create table centro_trabajo(
+   id bigint NOT NULL AUTO_INCREMENT primary key, 
+   Codigo varchar(20) ,
+   Descripcion  varchar (50) ,
+   nro_obreros integer,
+   costo_obrero double,
+   jornada_laboral  varchar (50) ,
+   nro_maquinas integer,
+   porc_gastos_varios double
+   );
+   
+   create table ruta_fabricacion(
+   id bigint NOT NULL AUTO_INCREMENT primary key, 
+   Codigo varchar(20) ,
+   Descripcion  varchar (50) ,
+   material_id bigint,
+   centro_trabajo_id bigint,
+   proceso_externo  varchar (50) ,
+   mano_obra integer,
+   costo_fijo double,
+   UMB varchar(50) ,
+   lote  varchar (50) ,
+   nro_centros_trabajo integer,
+   porc_gastos_indirectos double,
+   FOREIGN KEY (material_id) REFERENCES material(id),
+   FOREIGN KEY (centro_trabajo_id) REFERENCES centro_trabajo(id)
+   );
+   
+   create table guia_entrada(
+   id bigint NOT NULL AUTO_INCREMENT primary key, 
+   Codigo varchar(20) ,
+   centro_id bigint,
+   Fecha_recepcion datetime,
+   tipo_documento  varchar (50) ,
+   nro_documento  varchar (50) ,
+   proveedor_id integer,
+   nro_factura  varchar (50) ,
+   igv double,
+   subtotal double,
+   importe_neto double,
+   total double,
+   descuento double,
+   FOREIGN KEY (centro_id) REFERENCES centro(id)
+   );
+  
   
   
   
