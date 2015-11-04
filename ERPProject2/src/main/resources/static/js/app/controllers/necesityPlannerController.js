@@ -17,6 +17,14 @@ app.controller('necesityPlannerController', function($scope, necesityPlannerFact
 	        }
 	    });
 		
+		$('.dropdown-menu li a').on('click', function(e) {
+			e.preventDefault();
+			var ul = $(this).closest('ul');
+			var buttonId = ul.attr('aria-labelledby');
+			var button = $('#' + buttonId);
+			button.find('.txt-drp').text($(this).html());
+		});
+		
 	}
 	
 	$scope.addInboundGuide = function() {

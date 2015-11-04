@@ -25,6 +25,23 @@ app.controller('workCentersController', function($scope, workCentersFactory, ngT
 			var button = $('#' + buttonId);
 			button.find('.txt-drp').text($(this).html());
 		});
+		
+		$('.btn-toggle').click(function() {
+		    $(this).find('.btn').toggleClass('active');
+		    
+		    if ($(this).find('.btn-primary').size() > 0) {
+		    	$(this).find('.btn').toggleClass('btn-primary');
+		    }
+		    
+		    var id = $(this).find('.btn-primary').attr("id");
+		    if ("procesoExternoSi" === id ) {
+		    	$('#listaCentrosDiv').show();
+		    } else {
+		    	$('#listaCentrosDiv').hide();
+		    }
+		    
+		    $(this).find('.btn').toggleClass('btn-default');
+		});
 	}
 	
 	$scope.saveWorkCenter = function() {

@@ -1,0 +1,69 @@
+
+
+<div class="container cd-main-content">
+    <div class="row">
+        <ul class="breadcrumb breadcrumb-whitebg">
+            <li><a href="#">Produccion</a></li>
+            <li><a ui-sref="planificadorNecesidades">Planificador de Necesidades</a></li>
+            <li class="active">Nuevo Planificador</li>
+            </ul>
+    </div>
+    <div class="row row-title">
+        <div class="col-md-9">
+            <h2 id="navbar-buttons">Nuevo Planificador</h2>
+        </div>
+        <div class="col-md-3">
+        </div>
+    </div>
+    <div class="panel">
+        <div class="panel-body">
+            <form class="form-horizontal" role="form">
+                <div class="form-group">
+                    <label class="col-md-2 control-label" for="textinput">Orden de Fabricacion</label>
+                    <div class="col-md-3">
+                        <input id="textinput" name="textinput" placeholder="Orden de Fabricacion" class="form-control input-md"
+                            type="text"/>
+                    </div>
+                    <label class="col-md-2 control-label" for="textinput">Pedido de Venta</label>
+                    <div class="col-md-3">
+                        <input id="textinput" name="textinput" placeholder="Pedido de Venta"
+                            class="form-control input-md" type="text"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-2 control-label" for="textinput">Producto</label>
+                    <div class="col-md-3">
+                        <input id="textinput" name="textinput" placeholder="Producto" class="form-control input-md"
+                            type="text"/>
+                    </div>
+                    <label class="col-md-2 control-label" for="textinput">Descripcion</label>
+                    <div class="col-md-3">
+                        <input id="textinput" name="textinput" placeholder="Descripcion"
+                            class="form-control input-md" type="text"/>
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-2 control-label" for="textinput">Cantidad</label>
+                    <div class="col-md-3">
+                        <input id="textinput" name="textinput" placeholder="Cantidad" class="form-control input-md"
+                            type="text"/>
+                    </div>
+                    <label class="col-md-2 control-label" for="textinput">Unidad de Medida</label>
+                    <div class="col-md-3">
+                        <button class="btn btn-100 btn-default dropdown-toggle" type="button" id="unidadMedida"
+	                      data-toggle="dropdown">
+	                      <span class="txt-drp">Seleccione</span> <span class="caret"></span>
+	                    </button>
+	                    <ul class="dropdown-menu dropdown-menu-100" role="menu" aria-labelledby="unidadMedida">
+                        </ul>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div class="row pull-right">
+        <a ui-sref="planificadorNecesidades" class="btn btn-primary"><span class="glyphicon glyphicon-ok"></span> Grabar</a>
+        <a ui-sref="planificadorNecesidades" class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span> Cancelar</a>
+    </div>
+</div>

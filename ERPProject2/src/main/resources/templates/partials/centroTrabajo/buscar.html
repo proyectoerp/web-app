@@ -37,8 +37,8 @@
                     <label class="col-md-2 control-label" for="textinput">Proceso Externo</label>
                     <div class="col-md-3">
                         <div class="btn-group btn-toggle"> 
-						    <button class="btn btn-primary active">Si</button>
-						    <button class="btn btn-default">No</button>
+						    <button id="procesoExternoSi" class="btn btn-primary active">Si</button>
+						    <button id="procesoExternoNo" class="btn btn-default">No</button>
 						</div>
                     </div>
                 </div>
@@ -46,7 +46,7 @@
         </div>
     </div>
 
-    <div role="tabpanel" class="table-responsive">
+    <div role="tabpanel" class="table-responsive" id="listaCentrosDiv">
         <table ng-table="tableParams" class="table table-striped">
             <thead>
                 <tr>
