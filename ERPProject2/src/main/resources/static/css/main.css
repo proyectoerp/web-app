@@ -25,3 +25,6 @@
 .form-weight-normal label {
 	font-weight: normal;
 }
+.cursor-row {
+	cursor: pointer;
+}

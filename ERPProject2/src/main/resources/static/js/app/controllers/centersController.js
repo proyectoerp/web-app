@@ -1,4 +1,5 @@
-app.controller('centersController', function($scope, centersFactory, ngTableParams){
+app.controller('centersController', function($scope, centersFactory, ngTableParams, $filter, $stateParams){
+	$scope.center = {};
 	$scope.centers = [];
 	
 	init();
@@ -15,6 +16,11 @@ app.controller('centersController', function($scope, centersFactory, ngTablePara
 		            $defer.resolve($scope.centers.slice((params.page() - 1) * params.count(), params.page() * params.count()));
 		        }
 		    });
+			if (typeof $stateParams.centroId !== 'undefined') {
+				var filterArr = $filter('filter')($scope.centers, { id: $stateParams.centroId });
+				$scope.center = filterArr[0];
+				return;
+			}
 		});
 		
 		$('.dropdown-menu li a').on('click', function(e) {
@@ -26,6 +32,7 @@ app.controller('centersController', function($scope, centersFactory, ngTablePara
 		});
 		
 		$('.datetimepicker').datetimepicker();
+		
 	}
 	
 	$scope.searchCenters = function() {
@@ -43,12 +50,15 @@ app.controller('centersController', function($scope, centersFactory, ngTablePara
 	$scope.addCenter = function() {
 		var center = {
 			id: $scope.id,
-			name: $scope.name, 
 			description: $scope.description, 
-			unitOfMeasure: $scope.unitOfMeasure, 
-			lot: $scope.lot,
-			type: $scope.type
+			centerType: $scope.centerType, 
+			status: $scope.status,
 		};
-		$scope.centers.push(center);
+		$scope.centers.push($scope.center);
 	};
+	
+	$scope.editCenter = function() {
+		console.log('in editCenter');
+	}
+	
 });

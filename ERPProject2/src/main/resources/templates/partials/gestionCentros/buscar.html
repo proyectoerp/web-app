@@ -68,7 +68,7 @@
     </div>
 
     <div role="tabpanel" class="table-responsive">
-        <table ng-table="tableParams" class="table table-striped">
+        <table ng-table="tableParams" class="table table-striped" id="centros">
             <thead>
                 <tr>
                     <th>Codigo</th>
@@ -79,7 +79,7 @@
             </thead>
             <tbody>
                 <tr ng-repeat="centro in $data">
-                    <td>{{centro.id}}</td>
+                    <td ui-sref="editarCentros({centroId: centro.id})">{{centro.id}}</td>
                     <td>{{centro.description}}</td>
                     <td>{{centro.centerType}}</td>
                     <td>{{centro.status}}</td>

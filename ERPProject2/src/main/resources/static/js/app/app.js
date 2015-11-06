@@ -35,7 +35,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
         controller: 'centersController'
     })
     .state('editarCentros', {
-        url:'/agregarEditarCentros',
+        url:'/editarCentros/:centroId',
         templateUrl: 'partials/agregarEditarCentros',
         controller: 'centersController'
     })
@@ -49,7 +49,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
 		controller: 'materialsController',
 		templateUrl: 'partials/agregarEditarGuiaEntrada'
 	})
-	.state('editarguiaEntrada', {
+	.state('editarGuiaEntrada', {
 		url:'/guiaEntrada',
 		controller: 'materialsController',
 		templateUrl: 'partials/agregarEditarGuiaEntrada'
