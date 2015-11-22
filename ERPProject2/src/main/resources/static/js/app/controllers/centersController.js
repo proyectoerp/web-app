@@ -1,10 +1,11 @@
-app.controller('centersController', function($scope, centersFactory, ngTableParams, $filter, $stateParams){
+app.controller('centersController', function($scope, centersFactory, ngTableParams, $filter, $stateParams, $location){
 	$scope.center = {};
 	$scope.centers = [];
 	
 	init();
 	
 	function init() {
+		console.log('in init ' + $scope.centers);
 		centersFactory.getCenters($scope.centers, function(){
 			$scope.tableParams = new ngTableParams({
 		        page: 1,
@@ -48,13 +49,17 @@ app.controller('centersController', function($scope, centersFactory, ngTablePara
 	};
 	
 	$scope.addCenter = function() {
+		console.log('in addCenter');
 		var center = {
 			id: $scope.id,
 			description: $scope.description, 
 			centerType: $scope.centerType, 
 			status: $scope.status,
 		};
-		$scope.centers.push($scope.center);
+		$scope.centers.push(center);
+		$scope.tableParams.reload();
+		
+		$location.path('gestionCentros');
 	};
 	
 	$scope.editCenter = function() {
