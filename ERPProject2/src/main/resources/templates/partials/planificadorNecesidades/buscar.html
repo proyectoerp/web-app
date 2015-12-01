@@ -14,7 +14,6 @@
         <div class="col-md-3">
             <div class="pull-right btn-title">
                 <a href="#" class="btn btn-info"><span class="glyphicon glyphicon-search"></span> Buscar</a>
-                <a ui-sref="agregarPlanificadorNecesidades" class="btn btn-success"><span class="glyphicon glyphicon-plus"></span> Nuevo Planificador</a>
             </div>
         </div>
     </div>
@@ -74,7 +73,57 @@
     </div>
     
     <div class="row pull-right">
-	    <a href="#" class="btn btn-primary"><span class="glyphicon glyphicon-ok"></span> Ver Planificacion</a>
-	    <a href="#" class="btn btn-danger"><span class="glyphicon glyphicon-ok"></span> Ver Produccion</a>
+	    <a href="#" id="verPlanifiacion" class="btn btn-primary"><span class="glyphicon glyphicon-ok"></span> Ver Planificacion</a>
+	    <a href="#" id="verProduccion" class="btn btn-danger"><span class="glyphicon glyphicon-ok"></span> Ver Produccion</a>
 	</div>
+	
+	<div id="verPlanificacionDiv" role="tabpanel" style="display: none;">
+        <table ng-table="tableParams" class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Producto</th>
+                    <th>Descripcion</th>
+                    <th>Cantidad Planificada</th>
+                    <th>Stock</th>
+                    <th>Unidad Medida</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="planner in $data">
+                    <td>{{planner.id}}</td>
+                    <td>{{planner.product}}</td>
+                    <td>{{planner.description}}</td>
+                    <td>{{planner.quantity}}</td>
+                    <td>{{planner.stock}}</td>
+                    <td>{{planner.unitOfMeasure}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <div id="verProduccionDiv" role="tabpanel" style="display: none;">
+        <table ng-table="tableParams" class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Producto</th>
+                    <th>Descripcion</th>
+                    <th>Cantidad Solicitada</th>
+                    <th>Cantidad Producida</th>
+                    <th>Unidad Medida</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="planner in $data">
+                    <td>{{planner.id}}</td>
+                    <td>{{planner.product}}</td>
+                    <td>{{planner.description}}</td>
+                    <td>{{planner.requestedQuantity}}</td>
+                    <td>{{planner.quantityProduced}}</td>
+                    <td>{{planner.unitOfMeasure}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
 </div>

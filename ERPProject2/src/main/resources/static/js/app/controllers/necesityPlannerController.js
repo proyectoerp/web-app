@@ -25,6 +25,16 @@ app.controller('necesityPlannerController', function($scope, necesityPlannerFact
 			button.find('.txt-drp').text($(this).html());
 		});
 		
+		$('#verPlanificacionDiv').click(function() {
+			$('#verPlanificacionDiv').show();
+			$('#verProduccionDiv').hide();
+		});
+		
+		$('#verProduccionDiv').click(function() {
+			$('#verProduccionDiv').show();
+			$('#verPlanificacionDiv').hide();
+		});
+		
 	}
 	
 	$scope.addInboundGuide = function() {
