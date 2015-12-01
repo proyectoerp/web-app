@@ -1,0 +1,52 @@
+
+<div class="container cd-main-content">
+    <div class="row">
+        <ul class="breadcrumb breadcrumb-whitebg">
+            <li><a href="#">Datos Maestros</a></li>
+            <li class="active">Gestion de Centros</li>
+            </ul>
+    </div>
+    <div class="row row-title">
+        <div class="col-md-9">
+            <h2 id="navbar-buttons">Gestion de Centros</h2>
+        </div>
+        <div class="col-md-3">
+            <div class="pull-right btn-title">
+                <a href="#" class="btn btn-info"><span class="glyphicon glyphicon-search"></span> Buscar</a>
+                <a ui-sref="agregarCentros" class="btn btn-success"><span class="glyphicon glyphicon-plus"></span> Nuevo Centro</a>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="panel-body">
+            <form class="form-horizontal" role="form">
+                <div class="form-group form-weight-normal">
+                    <label class="col-md-2 control-label" for="textinput">Codigo</label>
+                    <div class="col-md-3">
+                        <input id="textinput" name="textinput" placeholder="Codigo" class="form-control input-md"
+                            type="text"/>
+                    </div>
+                    <label class="col-md-2 control-label" for="textinput">Descripcion Corta</label>
+                    <div class="col-md-3">
+                        <input id="textinput" name="textinput" placeholder="Descripcion Corta"
+                            class="form-control input-md" type="text"/>
+                    </div>
+                </div>
+                <div class="form-group form-weight-normal">
+                    <label class="col-md-2 control-label" for="textinput">Nivel</label>
+                    <div class="col-md-3">
+                        <button class="btn btn-100 btn-default dropdown-toggle" type="button" id="nivel"
+                            data-toggle="dropdown">
+                            <span class="txt-drp">Seleccione</span> <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-100" role="menu" aria-labelledby="nivel">
+                        </ul>
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div role="tabpanel" class="table-responsive" id="jstree_demo_div">
+    </div>
+</div>

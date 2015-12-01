@@ -55,23 +55,17 @@
             <thead>
                 <tr>
                     <th>N&deg; Ruta</th>
-                    <th>Centro de Trabajo</th>
                     <th>Descripion</th>
-                    <th>Proceso Externo</th>
-                    <th>Mano de Obra (h)</th>
-                    <th>Gastos Indirectos (%)</th>
-                    <th>Costo Fijo</th>
+                    <th>Material</th>
+                    <th>Nro de Centros de Trabajo</th>
                 </tr>
             </thead>
             <tbody>
                 <tr ng-repeat="route in $data">
                     <td>{{route.id}}</td>
-                    <td>{{route.workCenter}}</td>
                     <td>{{route.description}}</td>
-                    <td>{{route.externalProcess}}</td>
-                    <td>{{route.workforce}}</td>
-                    <td>{{route.indirectExpenses}}</td>
-                    <td>{{route.fixedCost}}</td>
+                    <td>{{route.material}}</td>
+                    <td>{{route.numberOfWorkCenters}}</td>
                 </tr>
             </tbody>
         </table>
