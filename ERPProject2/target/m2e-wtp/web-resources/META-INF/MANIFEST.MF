@@ -1,9 +1,9 @@
 Manifest-Version: 1.0
-Implementation-Vendor: Pivotal Software, Inc.
 Implementation-Title: ERPProject2
 Implementation-Version: 0.0.1-SNAPSHOT
+Built-By: miguel
 Implementation-Vendor-Id: com.company.erp
-Build-Jdk: 1.7.0_76
-Built-By: Main
+Build-Jdk: 1.8.0_51
 Created-By: Maven Integration for Eclipse
+Implementation-Vendor: Pivotal Software, Inc.
 
