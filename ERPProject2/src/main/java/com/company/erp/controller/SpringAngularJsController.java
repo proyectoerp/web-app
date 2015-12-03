@@ -112,7 +112,7 @@ public class SpringAngularJsController {
 		return "partials/planificadorNecesidades/agregarEditar";
 	}
 	
-	@RequestMapping(value = "/familia", method = RequestMethod.GET)
+	@RequestMapping(value = "/gestionFamilia", method = RequestMethod.GET)
 	public String displayFamily(Locale locale, Model m) {
 		logger.info("in displayFamily.", locale);
 		return "partials/familia/buscar";

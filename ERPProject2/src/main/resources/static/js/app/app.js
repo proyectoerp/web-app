@@ -114,10 +114,10 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
 		controller: 'necesityPlannerController',
 		templateUrl: 'partials/agregarEditarPlanificadorNecesidades'
 	})
-	.state('familia', {
-		url:'/familia',
+	.state('gestionFamilia', {
+		url:'/gestionFamilia',
 		controller: 'familyController',
-		templateUrl: 'partials/familia'
+		templateUrl: 'partials/gestionFamilia'
 	});
 	
 	
