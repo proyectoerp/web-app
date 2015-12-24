@@ -1,21 +1,29 @@
-app.controller('fabricationRoutesController', function($scope, fabricationRoutesFactory, ngTableParams){
+app.controller('fabricationRoutesController', function($scope, fabricationRoutesFactory, ngTableParams, $filter, $stateParams, $location){
+	$scope.fabricationRoute = {};
 	$scope.fabricationRoutes = [];
 	
 	init();
 	
 	function init() {
-		$scope.fabricationRoutes = fabricationRoutesFactory.getFabricationRoutes();
+		fabricationRoutesFactory.getFabricationRoutes($scope.fabricationRoutes, function(){
+			$scope.tableParams = new ngTableParams({
+		        page: 1,            // show first page
+		        count: 5           // count per page
+		    }, {
+		        total: $scope.fabricationRoutes.length, // length of data
+		        counts: [],
+		        getData: function ($defer, params) {
+		            $defer.resolve($scope.fabricationRoutes.slice((params.page() - 1) * params.count(), params.page() * params.count()));
+		        }
+		    });
+			if (typeof $stateParams.routeId !== 'undefined') {
+				var filterArr = $filter('filter')($scope.fabricationRoutes, { id: $stateParams.routeId });
+				$scope.fabricationRoute = filterArr[0];
+				return;
+			}
+		});
 		
-		$scope.tableParams = new ngTableParams({
-	        page: 1,            // show first page
-	        count: 5           // count per page
-	    }, {
-	        total: $scope.fabricationRoutes.length, // length of data
-	        counts: [],
-	        getData: function ($defer, params) {
-	            $defer.resolve($scope.fabricationRoutes.slice((params.page() - 1) * params.count(), params.page() * params.count()));
-	        }
-	    });
+		
 		
 	}
 	

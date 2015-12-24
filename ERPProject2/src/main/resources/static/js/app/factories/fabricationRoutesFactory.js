@@ -1,4 +1,5 @@
-app.factory('fabricationRoutesFactory', function() {
+app.factory('fabricationRoutesFactory', function($http) {
+	/*
 	var fabricationRoutes = [
 	    {id:'1111', name:'material 1', description:'descripcion 1', unitOfMeasure:'unidad 1', lot:'lote 1'},
 	    {id:'1112', name:'material 2', description:'descripcion 2', unitOfMeasure:'unidad 2', lot:'lote 2'},
@@ -12,10 +13,24 @@ app.factory('fabricationRoutesFactory', function() {
 	    {id:'1120', name:'material 10', description:'descripcion 10', unitOfMeasure:'unidad 10', lot:'lote 10'},
 	    {id:'1121', name:'material 11', description:'descripcion 11', unitOfMeasure:'unidad 11', lot:'lote 11'}
 	];
-	
+	*/
 	var factory = {};
-	factory.getFabricationRoutes = function() {
-		return fabricationRoutes;
+	factory.getFabricationRoutes = function(fabricationRoutes, callback) {		
+		$http.get('/erp/rutaFabricacion', {}).
+		then(function(response) {
+			$.each(response.data._embedded.rutaFabricacion, function(index, value) {				
+				fabricationRoutes.push({					
+					id: value.codigo,
+					description: value.descripcion,
+					material: value._links.material,
+					numberOfWorkCenters: value.nroCentrosTrabajo
+				});
+			});
+			
+			callback();
+		}, function(response) {
+			console.log(response);
+		});
 	}
 	
 	factory.saveFabricationRoute = function(fabricationRoute) {

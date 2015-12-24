@@ -51,7 +51,7 @@
             </thead>
             <tbody>
                 <tr ng-repeat="centro in $data">
-                    <td>{{centro.id}}</td>
+                    <td ui-sref="editarCentroTrabajo({centroTrabajoId: centro.id})" >{{centro.id}}</td> 
                     <td>{{centro.description}}</td>
                     <td>{{centro.numberOfWorkers}}</td>
                     <td>{{centro.costByWorker}}</td>

@@ -20,7 +20,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
         controller: 'materialsController'
     })
     .state('editarMateriales', {
-        url:'/agregarEditarMateriales',
+        url:'/agregarEditarMateriales/:materialId',
         templateUrl: 'partials/agregarEditarMateriales',
         controller: 'materialsController'
     })
@@ -80,7 +80,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
 		templateUrl: 'partials/agregarEditarCentroTrabajo'
 	})
 	.state('editarCentroTrabajo', {
-		url:'/editarCentroTrabajo',
+		url:'/editarCentroTrabajo/:centroTrabajoId', 
 		controller: 'workCentersController',
 		templateUrl: 'partials/agregarEditarCentroTrabajo'
 	})
@@ -95,7 +95,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
 		templateUrl: 'partials/agregarEditarRutaFabricacion'
 	})
 	.state('editarRutaFabricacion', {
-		url:'/editarRutaFabricacion',
+		url:'/editarRutaFabricacion/:routeId',
 		controller: 'fabricationRoutesController',
 		templateUrl: 'partials/agregarEditarRutaFabricacion'
 	})

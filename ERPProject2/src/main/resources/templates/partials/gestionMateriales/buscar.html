@@ -89,12 +89,12 @@
             </thead>
             <tbody>
                 <tr ng-repeat="material in $data">
-                    <td>{{material.id}}</td>
-                    <td>{{material.name}}</td>
+                    <td ui-sref="editarMateriales({materialId: material.id})">{{material.id}}</td>
                     <td>{{material.description}}</td>
-                    <td>{{material.unitOfMeasure}}</td>
-                    <td>{{material.lot}}</td>
-                    <td>{{material.lot}}</td>
+                    <td>{{material.type}}</td>
+                    <td>{{material.model}}</td>
+                    <td>{{material.umb}}</td>
+                    <td>{{material.status}}</td>
                 </tr>
             </tbody>
         </table>

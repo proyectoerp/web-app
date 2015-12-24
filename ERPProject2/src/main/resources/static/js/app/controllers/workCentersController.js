@@ -1,21 +1,28 @@
-app.controller('workCentersController', function($scope, workCentersFactory, ngTableParams){
+app.controller('workCentersController', function($scope, workCentersFactory, ngTableParams, $filter, $stateParams, $location){
+	$scope.workCenter = {};
 	$scope.workCenters = [];
 	
 	init();
 	
 	function init() {
-		$scope.workCenters = workCentersFactory.getWorkCenters();
-		
-		$scope.tableParams = new ngTableParams({
-	        page: 1,            // show first page
-	        count: 5           // count per page
-	    }, {
-	        total: $scope.workCenters.length, // length of data
-	        counts: [],
-	        getData: function ($defer, params) {
-	            $defer.resolve($scope.workCenters.slice((params.page() - 1) * params.count(), params.page() * params.count()));
-	        }
-	    });
+		console.log('in init ' + $scope.workCenters);
+		workCentersFactory.getWorkCenters($scope.workCenters, function(){
+			$scope.tableParams = new ngTableParams({
+		        page: 1,            // show first page
+		        count: 5           // count per page
+		    }, {
+		        total: $scope.workCenters.length, // length of data
+		        counts: [],
+		        getData: function ($defer, params) {
+		            $defer.resolve($scope.workCenters.slice((params.page() - 1) * params.count(), params.page() * params.count()));
+		        }
+		    });
+			if (typeof $stateParams.centroTrabajoId !== 'undefined') {
+				var filterArr = $filter('filter')($scope.workCenters, { id: $stateParams.centroTrabajoId });
+				$scope.workCenter = filterArr[0];
+				return;
+			}
+		});
 		
 		
 		$('.dropdown-menu li a').on('click', function(e) {

@@ -1,21 +1,30 @@
-app.controller('materialsController', function($scope, materialsFactory, ngTableParams){
+app.controller('materialsController', function($scope, materialsFactory, ngTableParams, $filter, $stateParams, $location){
+	$scope.material = {};
 	$scope.materials = [];
 	
 	init();
 	
 	function init() {
-		$scope.materials = materialsFactory.getMaterials();
+		console.log('in init ' + $scope.materials);
+		materialsFactory.getMaterials($scope.materials, function(){
+			$scope.tableParams = new ngTableParams({
+		        page: 1,            // show first page
+		        count: 5           // count per page
+		    }, {
+		        total: $scope.materials.length, // length of data
+		        counts: [],
+		        getData: function ($defer, params) {
+		            $defer.resolve($scope.materials.slice((params.page() - 1) * params.count(), params.page() * params.count()));
+		        }
+		    });
+			if (typeof $stateParams.materialId !== 'undefined') {
+				var filterArr = $filter('filter')($scope.materials, { id: $stateParams.materialId });
+				$scope.material = filterArr[0];
+				return;
+			}
+		});
 		
-		$scope.tableParams = new ngTableParams({
-	        page: 1,            // show first page
-	        count: 5           // count per page
-	    }, {
-	        total: $scope.materials.length, // length of data
-	        counts: [],
-	        getData: function ($defer, params) {
-	            $defer.resolve($scope.materials.slice((params.page() - 1) * params.count(), params.page() * params.count()));
-	        }
-	    });
+		
 		
 		$('.dropdown-menu li a').on('click', function(e) {
 			e.preventDefault();

@@ -1,4 +1,5 @@
-app.factory('materialsFactory', function() {
+app.factory('materialsFactory', function($http) {
+	/*
 	var materials = [
 	    {id:'1111', name:'material 1', description:'descripcion 1', unitOfMeasure:'unidad 1', lot:'lote 1'},
 	    {id:'1112', name:'material 2', description:'descripcion 2', unitOfMeasure:'unidad 2', lot:'lote 2'},
@@ -12,10 +13,27 @@ app.factory('materialsFactory', function() {
 	    {id:'1120', name:'material 10', description:'descripcion 10', unitOfMeasure:'unidad 10', lot:'lote 10'},
 	    {id:'1121', name:'material 11', description:'descripcion 11', unitOfMeasure:'unidad 11', lot:'lote 11'}
 	];
-	
+	*/
 	var factory = {};
-	factory.getMaterials = function() {
-		return materials;
+	factory.getMaterials = function(materials, callback) {
+		$http.get('/erp/material', {}).
+		then(function(response) {
+			$.each(response.data._embedded.material, function(index, value) {
+				materials.push({
+					id: value.codigo,
+					description: value.descripcion,
+					type: value.tipoProducto,
+					//family: value.familia.codigo,
+					model: value.modelo,
+					umb: value.umb,
+					status: value.estado
+				});
+			});
+			
+			callback();
+		}, function(response) {
+			console.log(response);
+		});
 	}
 	
 	factory.searchMaterials = function(material) {

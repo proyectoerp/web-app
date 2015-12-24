@@ -1,6 +1,6 @@
-app.factory('workCentersFactory', function() {
+app.factory('workCentersFactory', function($http) {
 	var factory = {};
-	
+	/*
 	var workCenters = [
  	    {id:'1111', description:'descripcion 1', numberOfWorkers:'numberOfWorkers 1', costByWorker:'costByWorkere 1', numberOfMachines:'numberOfMachines 1', otherExpenses:'otherExpenses 1'},
  	    {id:'1112', description:'descripcion 2', numberOfWorkers:'numberOfWorkers 2', costByWorker:'costByWorkere 2', numberOfMachines:'numberOfMachines 2', otherExpenses:'otherExpenses 2'},
@@ -14,9 +14,26 @@ app.factory('workCentersFactory', function() {
  	    {id:'1120', description:'descripcion 10', numberOfWorkers:'numberOfWorkers 10', costByWorker:'costByWorkere 10', numberOfMachines:'numberOfMachines 10', otherExpenses:'otherExpenses 10'},
  	    {id:'1121', description:'descripcion 11', numberOfWorkers:'numberOfWorkers 11', costByWorker:'costByWorkere 11', numberOfMachines:'numberOfMachines 11', otherExpenses:'otherExpenses 11'}
  	];
-	
-	factory.getWorkCenters = function() {
-		return workCenters;
+	*/
+	factory.getWorkCenters = function(workCenters, callback) {
+		$http.get('/erp/centroTrabajo', {}).
+		then(function(response) {
+			$.each(response.data._embedded.centroTrabajo, function(index, value) {
+				workCenters.push({					
+					id: value.codigo,
+					description: value.descripcion,
+					numberOfWorkers: value.nroObreros,
+					costByWorker: value.costoObrero,
+					numberOfMachines: value.nroMaquinas,
+					centerType: value.tipoCentro,
+					otherExpenses: value.porcGastosVarios	
+				});
+			});
+			
+			callback();
+		}, function(response) {
+			console.log(response);
+		});
 	}
 	
 	factory.saveWorkCenter = function(workCenter) {

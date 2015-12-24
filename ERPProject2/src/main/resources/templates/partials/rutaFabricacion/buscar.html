@@ -62,7 +62,7 @@
             </thead>
             <tbody>
                 <tr ng-repeat="route in $data">
-                    <td>{{route.id}}</td>
+                    <td ui-sref="editarRutaFabricacion({routeId: route.id})">{{route.id}}</td>
                     <td>{{route.description}}</td>
                     <td>{{route.material}}</td>
                     <td>{{route.numberOfWorkCenters}}</td>
