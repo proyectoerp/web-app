@@ -75,7 +75,7 @@
             </thead>
             <tbody>
                 <tr ng-repeat="material in $data">
-                    <td>{{material.id}}</td>
+                    <td ui-sref="editarListaMateriales({materialId: material.id})">{{material.id}}</td>
                     <td>{{material.name}}</td>
                     <td>{{material.description}}</td>
                     <td>{{material.unitOfMeasure}}</td>

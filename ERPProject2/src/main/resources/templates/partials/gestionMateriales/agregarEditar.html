@@ -21,19 +21,19 @@
                     <label class="col-md-2 control-label" for="textinput">Codigo</label>
                     <div class="col-md-3">
                         <input id="textinput" name="textinput" placeholder="Codigo" class="form-control input-md"
-                            type="text"/>
+                            type="text" ng-model="material.id"/>
                     </div>
                     <label class="col-md-2 control-label" for="textinput">Descripcion Corta</label>
                     <div class="col-md-3">
                         <input id="textinput" name="textinput" placeholder="Descripcion Corta"
-                            class="form-control input-md" type="text"/>
+                            class="form-control input-md" type="text" ng-model="material.description"/>
                     </div>
                 </div>
                 <div class="form-group">
                     <label class="col-md-2 control-label" for="textinput">Familia</label>
                     <div class="col-md-3">
                         <input id="textinput" name="textinput" placeholder="Familia" class="form-control input-md"
-                            type="text"/>
+                            type="text" />
                     </div>
                 </div>
             </form>
@@ -61,7 +61,7 @@
                             <label class="col-md-2 control-label" for="textinput">Modelo</label>
                             <div class="col-md-3">
                                 <input id="textinput" name="textinput" placeholder="Modelo"
-                                    class="form-control input-md" type="text"/>
+                                    class="form-control input-md" type="text" ng-model="material.model"/>
                             </div>
                             <label class="col-md-2 control-label" for="textinput">Tipo de Material</label>
                             <div class="col-md-3">
@@ -80,12 +80,12 @@
                             <label class="col-md-2 control-label" for="textinput">UMB</label>
                             <div class="col-md-3">
                                 <input id="textinput" name="textinput" placeholder="UMB" class="form-control input-md"
-                                    type="text"/>
+                                    type="text" ng-model="material.umb"/>
                             </div>
                             <label class="col-md-2 control-label" for="textinput">Peso (Kg)</label>
                             <div class="col-md-3">
                                 <input id="textinput" name="textinput" placeholder="Peso (Kg)"
-                                    class="form-control input-md" type="text"/>
+                                    class="form-control input-md" type="text" ng-model="material.weight"/>
                             </div>
                         </div>
                         <div class="form-group">
@@ -96,14 +96,14 @@
                             <label class="col-md-2 control-label" for="textinput">Estado</label>
                             <div class="col-md-3">
                                 <input id="textinput" name="textinput" placeholder="Estado"
-                                    class="form-control input-md" type="text"/>
+                                    class="form-control input-md" type="text" ng-model="material.status"/>
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-md-2 control-label" for="textinput">Fecha Fin Validez</label>
                             <div class="col-md-3">
                                 <div class='input-group date datepicker'>
-                                    <input type='text' class="form-control" /> <span class="input-group-addon">
+                                    <input type='text' class="form-control" ng-model="material.validationEndDate"/> <span class="input-group-addon">
                                         <span class="glyphicon glyphicon-calendar"></span>
                                     </span>
                                 </div>
@@ -119,19 +119,19 @@
                             <label class="col-md-2 control-label" for="textinput">Costo Promedio</label>
                             <div class="col-md-3">
                                 <input id="textinput" name="textinput" placeholder="Costo Promedio"
-                                    class="form-control input-md" type="text"/>
+                                    class="form-control input-md" type="text" ng-model="material.averageCost"/>
                             </div>
                             <label class="col-md-2 control-label" for="textinput">UM Pedido</label>
                             <div class="col-md-3">
                                 <input id="textinput" name="textinput" placeholder="UM Pedido"
-                                    class="form-control input-md" type="text"/>
+                                    class="form-control input-md" type="text" ng-model="material.umOrder"/>
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-md-2 control-label" for="textinput">Proveedor</label>
                             <div class="col-md-3">
                                 <input id="textinput" name="textinput" placeholder="Proveedor"
-                                    class="form-control input-md" type="text"/>
+                                    class="form-control input-md" type="text" ng-model="material.provider"/>
                             </div>
                         </div>
                     </form>
@@ -182,22 +182,24 @@
                             <label class="col-md-2 control-label" for="textinput">UM Venta</label>
                             <div class="col-md-3">
                                 <input id="textinput" name="textinput" placeholder="UM Venta"
-                                    class="form-control input-md" type="text"/>
+                                    class="form-control input-md" type="text" ng-model="material.umSale"/>
                             </div>
                             <label class="col-md-2 control-label" for="textinput">Utilidad (%)</label>
                             <div class="col-md-3">
                                 <input id="textinput" name="textinput" placeholder="Utilidad (%)"
-                                    class="form-control input-md" type="text"/>
+                                    class="form-control input-md" type="text" ng-model="material.profit"/>
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-md-2 control-label" for="textinput">Precio Vta Sin IGV</label>
                             <div class="col-md-3">
                                 <input id="textinput" name="textinput" placeholder="Precio Vta Sin IGV"
-                                    class="form-control input-md" type="text"/>
+                                    class="form-control input-md" type="text" ng-model="material.salePriceWithoutIGV"/>
                             </div>
                             <label class="col-md-2 control-label" for="textinput">Precio Vta Con IGV</label>
                             <div class="col-md-3">
+                            	<input id="textinput" name="textinput" placeholder="Precio Vta Con IGV"
+                                    class="form-control input-md" type="text" ng-model="material.salePriceWithIGV"/>
                             </div>
                         </div>
                     </form>
@@ -210,7 +212,7 @@
                             <label class="col-md-2 control-label" for="textinput">UM Lote</label>
                             <div class="col-md-3">
                                 <input id="textinput" name="textinput" placeholder="UM Lote"
-                                    class="form-control input-md" type="text"/>
+                                    class="form-control input-md" type="text" ng-model="material.umLot"/>
                             </div>
                             <label class="col-md-2 control-label" for="textinput">Unidad por Lote</label>
                             <div class="col-md-3">

@@ -21,19 +21,19 @@
                     <label class="col-md-2 control-label" for="textinput">N&deg; Ruta de Fabricacion</label>
                     <div class="col-md-3">
                         <input id="textinput" name="textinput" placeholder="N&deg; Ruta de Fabricacion"
-                            class="form-control input-md" type="text"/>
+                            class="form-control input-md" type="text" ng-model="fabricationRoute.id" />
                     </div>
                     <label class="col-md-2 control-label" for="textinput">Descripcion</label>
                     <div class="col-md-3">
                     	<input id="textinput" name="textinput" placeholder="Descripcion"
-                             class="form-control input-md" type="text"/>
+                             class="form-control input-md" type="text" ng-model="fabricationRoute.description"/>
                 	</div>
                 </div>
                 <div class="form-group">
                     <label class="col-md-2 control-label" for="textinput">Material</label>
                     <div class="col-md-3">
                         <input id="textinput" name="textinput" placeholder="Material" class="form-control input-md"
-                            type="text"/>
+                            type="text" ng-model="fabricationRoute.material" />
                     </div>
                     <label class="col-md-2 control-label" for="textinput">Unidad de Medida</label>
                     <div class="col-md-3">
@@ -49,12 +49,12 @@
                     <label class="col-md-2 control-label" for="textinput">Lote</label>
                     <div class="col-md-3">
                         <input id="textinput" name="textinput" placeholder="Lote"
-                            class="form-control input-md" type="text"/>
+                            class="form-control input-md" type="text" ng-model="fabricationRoute.lot" />
                     </div>
                     <label class="col-md-2 control-label" for="textinput">N&deg; Centros de Trabajo</label>
                     <div class="col-md-3">
                         <input id="textinput" name="textinput" placeholder="N&deg; Centros de Trabajo"
-                            class="form-control input-md" type="text"/>
+                            class="form-control input-md" type="text" ng-model="fabricationRoute.numberOfWorkCenters"/>
                     </div>
                 </div>
             </form>

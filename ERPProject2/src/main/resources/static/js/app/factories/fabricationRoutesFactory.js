@@ -23,7 +23,14 @@ app.factory('fabricationRoutesFactory', function($http) {
 					id: value.codigo,
 					description: value.descripcion,
 					material: value._links.material,
-					numberOfWorkCenters: value.nroCentrosTrabajo
+					numberOfWorkCenters: value.nroCentrosTrabajo,
+					externProcess: value.procesoExterno,					
+					umb: value.umb,
+					labor: value.manoDeObra,
+					fixedCost: value.costoFijo,
+					lot: value.lote,
+					inderectExpenses:value.porcGastosIndirectos,
+
 				});
 			});
 			

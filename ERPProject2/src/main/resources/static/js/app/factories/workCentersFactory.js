@@ -24,8 +24,8 @@ app.factory('workCentersFactory', function($http) {
 					description: value.descripcion,
 					numberOfWorkers: value.nroObreros,
 					costByWorker: value.costoObrero,
+					workingDay: value.jornadaLaboral,
 					numberOfMachines: value.nroMaquinas,
-					centerType: value.tipoCentro,
 					otherExpenses: value.porcGastosVarios	
 				});
 			});
