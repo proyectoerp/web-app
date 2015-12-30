@@ -1,4 +1,5 @@
-app.factory('inboundGuideFactory', function() {
+app.factory('inboundGuideFactory', function($http) {
+	/*
 	var inboundGuides = [
 	    {id:'1111', name:'material 1', description:'descripcion 1', unitOfMeasure:'unidad 1', lot:'lote 1'},
 	    {id:'1112', name:'material 2', description:'descripcion 2', unitOfMeasure:'unidad 2', lot:'lote 2'},
@@ -12,10 +13,31 @@ app.factory('inboundGuideFactory', function() {
 	    {id:'1120', name:'material 10', description:'descripcion 10', unitOfMeasure:'unidad 10', lot:'lote 10'},
 	    {id:'1121', name:'material 11', description:'descripcion 11', unitOfMeasure:'unidad 11', lot:'lote 11'}
 	];
-	
+	*/
 	var factory = {};
-	factory.getInboundGuides = function() {
-		return inboundGuides;
+	factory.getInboundGuides = function(inboundGuides, callback) {
+		$http.get('/erp/guiaEntrada', {}).
+		then(function(response) {
+			$.each(response.data._embedded.guiaEntrada, function(index, value) {
+				inboundGuides.push({
+					id: value.codigo,
+					receptionDate: value.fechaRecepcion,
+					docType: value.tipoDocumento,
+					docCode: value.nroDocumento,
+					provider: value.proveedor,
+					ticketNumber: value.nroFactura,
+					discount: value.descuento,
+					igv: value.igv,
+					subTotal: value.subtotal,
+					total: value.total,
+					netAmount: value.importeNeto,
+				});
+			});
+			
+			callback();
+		}, function(response) {
+			console.log(response);
+		});
 	}
 	
 	factory.searchInboundGuides = function(inboundGuide) {

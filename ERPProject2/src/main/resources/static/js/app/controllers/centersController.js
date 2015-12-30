@@ -49,13 +49,13 @@ app.controller('centersController', function($scope, centersFactory, ngTablePara
 	};
 	
 	$scope.addCenter = function() {
-		console.log('in addCenter');
+		console.log('in addCenter');		
 		var center = {
-			id: $scope.id,
-			description: $scope.description, 
-			centerType: $scope.centerType, 
-			status: $scope.status,
-		};
+			id: $scope.center.id,
+			description: $scope.center.description, 
+			centerType: $scope.center.centerType, 
+			status: $scope.center.status,
+		};		
 		$scope.centers.push(center);
 		$scope.tableParams.reload();
 		

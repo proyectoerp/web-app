@@ -81,7 +81,7 @@
         <table ng-table="tableParams" class="table table-striped">
             <thead>
                 <tr>
-                    <th>N° Guia</th>
+                    <th>Nï¿½ Guia</th>
                     <th>Fecha de Recepcion</th>
                     <th>Tipo de Documento</th>
                     <th>N&deg; de Documento</th>
@@ -90,11 +90,11 @@
             </thead>
             <tbody>
                 <tr ng-repeat="guia in $data">
-                    <td>{{guia.id}}</td>
-                    <td>{{guia.name}}</td>
-                    <td>{{guia.description}}</td>
-                    <td>{{guia.unitOfMeasure}}</td>
-                    <td>{{guia.lot}}</td>
+                    <td ui-sref="editarGuiaEntrada({guiaId: guia.id})" >{{guia.id}}</td>
+                    <td>{{guia.receptionDate}}</td>
+                    <td>{{guia.docType}}</td>
+                    <td>{{guia.docCode}}</td>
+                    <td>{{guia.provider}}</td>
                 </tr>
             </tbody>
         </table>

@@ -41,17 +41,17 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
     })
 	.state('guiaEntrada', {
 		url:'/guiaEntrada',
-		controller: 'materialsController',
+		controller: 'inboundGuideController',
 		templateUrl: 'partials/guiaEntrada'
 	})
 	.state('agregarGuiaEntrada', {
 		url:'/agregarGuiaEntrada',
-		controller: 'materialsController',
+		controller: 'inboundGuideController',
 		templateUrl: 'partials/agregarEditarGuiaEntrada'
 	})
 	.state('editarGuiaEntrada', {
-		url:'/guiaEntrada',
-		controller: 'materialsController',
+		url:'/guiaEntrada/:guiaId',
+		controller: 'inboundGuideController',
 		templateUrl: 'partials/agregarEditarGuiaEntrada'
 	})
 	.state('listaMateriales', {
