@@ -1,0 +1,84 @@
+
+<div class="container cd-main-content">
+    <div class="row">
+        <ul class="breadcrumb breadcrumb-whitebg">
+            <li><a href="#">Datos Maestros</a></li>
+            <li class="active">Gestion de Proveedor</li>
+            </ul>
+    </div>
+    <div class="row row-title">
+        <div class="col-md-9">
+            <h2 id="navbar-buttons">Gestion de Proveedor</h2>
+        </div>
+        <div class="col-md-3">
+            <div class="pull-right btn-title">
+                <a href="#" class="btn btn-info"><span class="glyphicon glyphicon-search"></span> Buscar</a>
+                <a ui-sref="agregarProveedor" class="btn btn-success"><span class="glyphicon glyphicon-plus"></span> Nuevo Proveedor</a>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="panel-body">
+            <form class="form-horizontal" role="form">
+                <div class="form-group form-weight-normal">
+                    <label class="col-md-2 control-label" for="textinput">N&deg; Proveedor</label>
+                    <div class="col-md-3">
+                        <input id="textinput" name="textinput" placeholder="N&deg; Proveedor" class="form-control input-md"
+                            type="text"/>
+                    </div>
+                    <label class="col-md-2 control-label" for="textinput">Nombre</label>
+                    <div class="col-md-3">
+                        <input id="textinput" name="textinput" placeholder="Nombre"
+                            class="form-control input-md" type="text"/>
+                    </div>
+                </div>
+                <div class="form-group form-weight-normal">                    
+                    <label class="col-md-2 control-label" for="textinput">RUC</label>
+                    <div class="col-md-3">
+                        <input id="textinput" name="textinput" placeholder="RUC"
+                            class="form-control input-md" type="text"/>
+                    </div>
+                    <label class="col-md-2 control-label" for="textinput">Fecha de Creación</label>
+                    <div class="col-md-3">
+                        <div class='input-group date datetimepicker'>
+                            <input type='text' class="form-control" /> 
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-calendar"></span>
+                            </span>
+                        </div>
+                    </div>
+                </div>                
+                <div class="form-group">
+                    <div class="col-md-5">
+                    </div>
+                    <div class="col-md-5">
+                        
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div role="tabpanel" class="table-responsive">
+        <table ng-table="tableParams" class="table table-striped">
+            <thead>
+                <tr>
+                    <th>N&deg; Proveedor</th>
+                    <th>Fecha de Creacion</th>
+                    <th>Nombre</th>
+                    <th>RUC</th>
+                    <th>Telefono Celular</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="proveedor in $data">
+                    <td ui-sref="editarProveedor({proveedorId: proveedor.id})" >{{proveedor.id}}</td>
+                    <td>{{proveedor.creationDate}}</td>
+                    <td>{{proveedor.name}}</td>
+                    <td>{{proveedor.ruc}}</td>
+                    <td>{{proveedor.cellphone}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

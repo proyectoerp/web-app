@@ -39,6 +39,21 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
         templateUrl: 'partials/agregarEditarCentros',
         controller: 'centersController'
     })
+    .state('gestionProveedor', {
+        url:'/gestionProveedor',
+        templateUrl: 'partials/gestionProveedor',
+        controller: 'providerController'
+    })
+    .state('agregarProveedor', {
+        url:'/agregarEditarProveedor',
+        templateUrl: 'partials/agregarEditarProveedor',
+        controller: 'providerController'
+    })
+    .state('editarProveedor', {
+        url:'/editarProveedor/:proveedorId',
+        templateUrl: 'partials/agregarEditarProveedor',
+        controller: 'providerController'
+    })
 	.state('guiaEntrada', {
 		url:'/guiaEntrada',
 		controller: 'inboundGuideController',
@@ -50,7 +65,7 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
 		templateUrl: 'partials/agregarEditarGuiaEntrada'
 	})
 	.state('editarGuiaEntrada', {
-		url:'/guiaEntrada/:guiaId',
+		url:'/editarGuiaEntrada/:guiaId',
 		controller: 'inboundGuideController',
 		templateUrl: 'partials/agregarEditarGuiaEntrada'
 	})
@@ -118,6 +133,21 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
 		url:'/gestionFamilia',
 		controller: 'familyController',
 		templateUrl: 'partials/gestionFamilia'
+	})
+	.state('guiaSalida', {
+		url:'/guiaSalida',
+		controller: 'outboundGuideController',
+		templateUrl: 'partials/guiaSalida'
+	})
+	.state('agregarGuiaSalida', {
+		url:'/agregarGuiaSalida',
+		controller: 'outboundGuideController',
+		templateUrl: 'partials/agregarEditarGuiaSalida'
+	})
+	.state('editarGuiaSalida', {
+		url:'/editarGuiaSalida/:guiaId',
+		controller: 'outboundGuideController',
+		templateUrl: 'partials/agregarEditarGuiaSalida'
 	});
 	
 	

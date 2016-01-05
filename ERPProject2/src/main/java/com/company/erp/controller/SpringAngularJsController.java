@@ -49,6 +49,18 @@ public class SpringAngularJsController {
 		return "partials/gestionCentros/agregarEditar";
 	}
 	
+	@RequestMapping(value = "/gestionProveedor", method = RequestMethod.GET)
+	public String displayProviderManagement(Locale locale, Model m) {
+		logger.info("in displayProviderManagement.", locale);
+		return "partials/gestionProveedor/buscar";
+	}
+	
+	@RequestMapping(value = "/agregarEditarProveedor", method = RequestMethod.GET)
+	public String addEditProvider(Locale locale, Model m) {
+		logger.info("in addEditProvider.", locale);
+		return "partials/gestionProveedor/agregarEditar";
+	}
+	
 	@RequestMapping(value = "/guiaEntrada", method = RequestMethod.GET)
 	public String displayInboundGuide(Locale locale, Model m) {
 		logger.info("in displayInboundGuide.", locale);
@@ -116,5 +128,17 @@ public class SpringAngularJsController {
 	public String displayFamily(Locale locale, Model m) {
 		logger.info("in displayFamily.", locale);
 		return "partials/familia/buscar";
+	}
+	
+	@RequestMapping(value = "/guiaSalida", method = RequestMethod.GET)
+	public String displayOutboundGuide(Locale locale, Model m) {
+		logger.info("in displayOutboundGuide.", locale);
+		return "partials/guiaSalida/buscar";
+	}
+	
+	@RequestMapping(value = "/agregarEditarGuiaSalida", method = RequestMethod.GET)
+	public String addEditOutboundGuide(Locale locale, Model m) {
+		logger.info("in addEditOutboundGuide.", locale);
+		return "partials/guiaSalida/agregarEditar";
 	}
 }
