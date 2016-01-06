@@ -49,6 +49,18 @@ public class SpringAngularJsController {
 		return "partials/gestionCentros/agregarEditar";
 	}
 	
+	@RequestMapping(value = "/gestionClientes", method = RequestMethod.GET)
+	public String displayCustomersManagement(Locale locale, Model m) {
+		logger.info("in displayCustomersManagement.", locale);
+		return "partials/gestionClientes/buscar";
+	}
+	
+	@RequestMapping(value = "/agregarEditarClientes", method = RequestMethod.GET)
+	public String addEditCustomers(Locale locale, Model m) {
+		logger.info("in addEditCustomers.", locale);
+		return "partials/gestionClientes/agregarEditar";
+	}
+	
 	@RequestMapping(value = "/gestionProveedor", method = RequestMethod.GET)
 	public String displayProviderManagement(Locale locale, Model m) {
 		logger.info("in displayProviderManagement.", locale);
@@ -140,5 +152,16 @@ public class SpringAngularJsController {
 	public String addEditOutboundGuide(Locale locale, Model m) {
 		logger.info("in addEditOutboundGuide.", locale);
 		return "partials/guiaSalida/agregarEditar";
+	}
+	
+	@RequestMapping(value = "/transferencias", method = RequestMethod.GET)
+	public String displayTransfers(Locale locale, Model m) {
+		logger.info("in displayTransfers.", locale);
+		return "partials/transferencias/buscar";
+	}
+	@RequestMapping(value = "/agregarEditarTransferencias", method = RequestMethod.GET)
+	public String addEditTransfers(Locale locale, Model m) {
+		logger.info("in addEditTransfers.", locale);
+		return "partials/transferencias/agregarEditar";
 	}
 }

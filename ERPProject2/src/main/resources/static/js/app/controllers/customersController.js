@@ -1,25 +1,25 @@
-app.controller('providerController', function($scope, providerFactory, ngTableParams, $filter, $stateParams, $location){
-	$scope.provider = {};
-	$scope.providers = [];
+app.controller('customersController', function($scope, customersFactory, ngTableParams, $filter, $stateParams, $location){
+	$scope.customer = {};
+	$scope.customers = [];
 	
 	init();
 	
 	function init() {
-		console.log('in init ' + $scope.providers);
-		providerFactory.getProviders($scope.providers, function(){
+		console.log('in init ' + $scope.customers);
+		customersFactory.getCustomers($scope.customers, function(){
 			$scope.tableParams = new ngTableParams({
 		        page: 1,            // show first page
 		        count: 5           // count per page
 		    }, {
-		        total: $scope.providers.length, // length of data
+		        total: $scope.customers.length, // length of data
 		        counts: [],
 		        getData: function ($defer, params) {
-		            $defer.resolve($scope.providers.slice((params.page() - 1) * params.count(), params.page() * params.count()));
+		            $defer.resolve($scope.customers.slice((params.page() - 1) * params.count(), params.page() * params.count()));
 		        }
 		    });
-			if (typeof $stateParams.proveedorId !== 'undefined') {
-				var filterArr = $filter('filter')($scope.providers, { id: $stateParams.proveerdorId });
-				$scope.provider = filterArr[0];
+			if (typeof $stateParams.clienteId !== 'undefined') {
+				var filterArr = $filter('filter')($scope.customers, { id: $stateParams.clienteId });
+				$scope.customer = filterArr[0];
 				return;
 			}			
 		});
@@ -37,8 +37,8 @@ app.controller('providerController', function($scope, providerFactory, ngTablePa
 		$('.datetimepicker').datetimepicker();
 	}
 	
-	$scope.searchProviders = function() {
-		var provider = {
+	$scope.searchCustomers = function() {
+		var customer = {
 			id: $scope.id,
 			name: $scope.name, 
 			description: $scope.description, 
@@ -46,11 +46,11 @@ app.controller('providerController', function($scope, providerFactory, ngTablePa
 			lot: $scope.lot,
 			type: $scope.type
 		};
-		$scope.providers = providerFactory.searchProviders(provider);
+		$scope.customers = customersFactory.searchCustomers(customer);
 	};
 	
-	$scope.addProvider = function() {
-		var provider = {
+	$scope.addCustomer = function() {
+		var customer = {
 			id: $scope.id,
 			name: $scope.name, 
 			description: $scope.description, 
@@ -58,6 +58,6 @@ app.controller('providerController', function($scope, providerFactory, ngTablePa
 			lot: $scope.lot,
 			type: $scope.type
 		};
-		$scope.providers.push(provider);
+		$scope.customers.push(customer);
 	};
 });

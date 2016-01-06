@@ -54,6 +54,21 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
         templateUrl: 'partials/agregarEditarProveedor',
         controller: 'providerController'
     })
+    .state('gestionClientes', {
+        url:'/gestionClientes',
+        templateUrl: 'partials/gestionClientes',
+        controller: 'customersController'
+    })
+    .state('agregarClientes', {
+        url:'/agregarEditarClientes',
+        templateUrl: 'partials/agregarEditarClientes',
+        controller: 'customersController'
+    })
+    .state('editarClientes', {
+        url:'/editarClientes/:clienteId',
+        templateUrl: 'partials/agregarEditarClientes',
+        controller: 'customersController'
+    })
 	.state('guiaEntrada', {
 		url:'/guiaEntrada',
 		controller: 'inboundGuideController',
@@ -148,7 +163,21 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
 		url:'/editarGuiaSalida/:guiaId',
 		controller: 'outboundGuideController',
 		templateUrl: 'partials/agregarEditarGuiaSalida'
+	})
+	.state('transferencias', {
+		url:'/transferencias',
+		controller: 'transfersController',
+		templateUrl: 'partials/transferencias'
+	})
+	.state('agregarTransferencias', {
+		url:'/agregarTransferencias',
+		controller: 'transfersController',
+		templateUrl: 'partials/agregarEditarTransferencias'
+	})
+	.state('editarTransferencias', {
+		url:'/editarTransferencias/:transferenciaId',
+		controller: 'transfersController',
+		templateUrl: 'partials/agregarEditarTransferencias'
 	});
-	
 	
 }]);

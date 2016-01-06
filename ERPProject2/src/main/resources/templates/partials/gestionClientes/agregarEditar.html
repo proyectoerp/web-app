@@ -3,13 +3,13 @@
     <div class="row">
         <ul class="breadcrumb breadcrumb-whitebg">
             <li><a href="#">Datos Maestros</a></li>
-            <li><a ui-sref="gestionProveedor">Gestion de Proveedor</a></li>
-            <li class="active">Nuevo Proveedor</li>
+            <li><a ui-sref="gestionClientes">Gestion de Clientes</a></li>
+            <li class="active">Nuevo Cliente</li>
             </ul>
     </div>
     <div class="row row-title">
         <div class="col-md-9">
-            <h2 id="navbar-buttons">Nuevo Proveedor</h2>
+            <h2 id="navbar-buttons">Nuevo Cliente</h2>
         </div>
         <div class="col-md-3">
             <div class="pull-right btn-title">
@@ -23,31 +23,37 @@
                     <label class="col-md-2 control-label" for="textinput">Codigo</label>
                     <div class="col-md-3">
                         <input id="textinput" name="textinput" placeholder="Codigo"
-                            class="form-control input-md" type="text" ng-model="provider.id"/>
+                            class="form-control input-md" type="text" ng-model="customer.id"/>
                     </div>
                     <label class="col-md-2 control-label" for="textinput">Descripcion Corta</label>
                     <div class="col-md-3">
                     	<input id="textinput" name="textinput" placeholder="Descripcion Corta"
-                             class="form-control input-md" type="text" ng-model="provider.shortDescription"/>
+                             class="form-control input-md" type="text" ng-model="customer.description"/>
                 	</div>
                 </div>
                 <div class="form-group">
-                    <label class="col-md-2 control-label" for="textinput">RUC</label>
+                    <label class="col-md-2 control-label" for="textinput">Tipo de Documento</label>
                     <div class="col-md-3">
-                        <input id="textinput" name="textinput" placeholder="RUC"
-                            class="form-control input-md" type="text" ng-model="provider.ruc"/>
+                        <button class="btn btn-100 btn-default dropdown-toggle" type="button" id="tipoDocumento"
+                            data-toggle="dropdown">
+                            <span class="txt-drp">Seleccione</span> <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-100" role="menu" aria-labelledby="tipoDocumento">
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">RUC</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">DNI</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">C.E.</a></li>
+                        </ul>
                     </div>
-                    <label class="col-md-2 control-label" for="textinput">Descripcion Larga</label>
-                    <div class="col-md-3">                    	
-                        <textarea class="form-control textarea-md" placeholder="Descripcion Larga"  style="resize:none;" cols="40" rows="4" name="textarea" id="textarea" ng-model="provider.longDescription" ></textarea>     
-                	</div>
-                </div>
-                
+                    <label class="col-md-2 control-label" for="textinput">Nro de Documento</label>
+                    <div class="col-md-3">
+                        <input id="textinput" name="textinput" placeholder="Nro de Documento"
+                            class="form-control input-md" type="text" ng-model="customer.docCode" />
+                    </div>
+                </div>                
                 <div class="form-group">
                     <div class="col-md-5">
                     </div>
-                    <div class="col-md-5">
-                        
+                    <div class="col-md-5">                        
                     </div>
                 </div>
             </form>
@@ -59,9 +65,7 @@
         <!-- Nav tabs -->
         <ul class="nav nav-tabs" role="tablist">
             <li role="presentation" class="active"><a href="#datosGenerales" aria-controls="datosGenerales" role="tab" data-toggle="tab">Datos Generales</a></li>
-            <li role="presentation"><a href="#contacto" aria-controls="contacto" role="tab" data-toggle="tab">Contacto</a></li>            
-            <li role="presentation"><a href="#condiciones" aria-controls="condiciones" role="tab" data-toggle="tab">Condiciones</a></li>
-            <li role="presentation"><a href="#listaOC" aria-controls="listaOC" role="tab" data-toggle="tab">Lista OC</a></li>
+            <li role="presentation"><a href="#listaPedidoVenta" aria-controls="contacto" role="tab" data-toggle="tab">lista Pedido Venta</a></li>
             <li role="presentation"><a href="#productos" aria-controls="productos" role="tab" data-toggle="tab">Productos</a></li>
         </ul>
         
@@ -72,50 +76,50 @@
                         <div class="form-group">
                             <label class="col-md-2 control-label" for="textinput">Direccion</label>
                             <div class="col-md-8">
-                                <textarea class="form-control textarea-md" placeholder="Direccion"  style="resize:none;" cols="40" rows="4" name="textarea" id="textarea" ng-model="provider.address" ></textarea>
+                                <textarea class="form-control textarea-md" placeholder="Direccion"  style="resize:none;" cols="40" rows="4" name="textarea" id="textarea" ng-model="customer.address" ></textarea>
                             </div>                            
                         </div>
                         <div class="form-group">
                             <label class="col-md-2 control-label" for="textinput">Telefono</label>
                             <div class="col-md-3">
                                 <input id="textinput" name="textinput" placeholder="Telefono"
-                                    class="form-control input-md" type="text" ng-model="provider.telephone"/>
+                                    class="form-control input-md" type="text" ng-model="customer.telephone"/>
                             </div>
                             <label class="col-md-2 control-label" for="textinput">Anexo</label>
                             <div class="col-md-3">
                                 <input id="textinput" name="textinput" placeholder="Anexo"
-                                    class="form-control input-md" type="text" ng-model="provider.annex"/>
+                                    class="form-control input-md" type="text" ng-model="customer.annex"/>
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-md-2 control-label" for="textinput">Correo</label>
                             <div class="col-md-3">
                                 <input id="textinput" name="textinput" placeholder="Correo"
-                                    class="form-control input-md" type="text" ng-model="provider.email"/>
+                                    class="form-control input-md" type="text" ng-model="customer.email"/>
                             </div>
                             <label class="col-md-2 control-label" for="textinput">Celular</label>
                             <div class="col-md-3">
                                 <input id="textinput" name="textinput" placeholder="Celular"
-                                    class="form-control input-md" type="text" ng-model="provider.cellphone"/>
+                                    class="form-control input-md" type="text" ng-model="customer.cellphone"/>
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-md-2 control-label" for="textinput">Web</label>
                             <div class="col-md-3">
                                 <input id="textinput" name="textinput" placeholder="Web"
-                                    class="form-control input-md" type="text" ng-model="provider.web"/>
+                                    class="form-control input-md" type="text" ng-model="customer.web"/>
                             </div>
-                            <label class="col-md-2 control-label" for="textinput">Tipo</label>
+                            <label class="col-md-2 control-label" for="textinput">Actividad</label>
                             <div class="col-md-3">
-                                <input id="textinput" name="textinput" placeholder="Tipo"
-                                    class="form-control input-md" type="text" ng-model="provider.type"/>
+                                <input id="textinput" name="textinput" placeholder="Actividad"
+                                    class="form-control input-md" type="text" ng-model="customer.activity"/>
                             </div>
                         </div>
                         <div class="form-group">
                             <label class="col-md-2 control-label" for="textinput">Fecha Creación</label>
                             <div class="col-md-3">
 		                        <div class='input-group date datetimepicker'>
-		                            <input type='text' class="form-control" ng-model="provider.creationDate" /> 
+		                            <input type='text' class="form-control" ng-model="customer.creationDate" /> 
 		                            <span class="input-group-addon">
 		                                <span class="glyphicon glyphicon-calendar"></span>
 		                            </span>
@@ -124,100 +128,19 @@
                             <label class="col-md-2 control-label" for="textinput">Estado</label>
                             <div class="col-md-3">
                                 <input id="textinput" name="textinput" placeholder="Estado"
-                                    class="form-control input-md" type="text" ng-model="provider.status"/>
+                                    class="form-control input-md" type="text" ng-model="customer.status"/>
                             </div>
                         </div>
                     </form>
                 </div>
             </div>
-            <div role="tabpanel" class="tab-pane" id="contacto">
-                <div class="row clearfix row-space">
-                    <form class="form-horizontal" role="form">
-                        <div class="form-group">
-                            <label class="col-md-2 control-label" for="textinput">Nombre</label>
-                            <div class="col-md-8">
-                                <input id="textinput" name="textinput" placeholder="Nombre"
-                                    class="form-control input-md" type="text" ng-model="provider.contactName"/>
-                            </div>                            
-                        </div>
-                        <div class="form-group">
-                            <label class="col-md-2 control-label" for="textinput">Telefono</label>
-                            <div class="col-md-3">
-                                <input id="textinput" name="textinput" placeholder="Telefono"
-                                    class="form-control input-md" type="text" ng-model="provider.contactTelephone"/>
-                            </div>
-                            <label class="col-md-2 control-label" for="textinput">Anexo</label>
-                            <div class="col-md-3">
-                                <input id="textinput" name="textinput" placeholder="Anexo"
-                                    class="form-control input-md" type="text" ng-model="provider.contactAnnex"/>
-                            </div>
-                        </div>
-                        <div class="form-group">
-                            <label class="col-md-2 control-label" for="textinput">Correo</label>
-                            <div class="col-md-3">
-                                <input id="textinput" name="textinput" placeholder="Correo"
-                                    class="form-control input-md" type="text" ng-model="provider.contactEmail"/>
-                            </div>
-                            <label class="col-md-2 control-label" for="textinput">Celular</label>
-                            <div class="col-md-3">
-                                <input id="textinput" name="textinput" placeholder="Celular"
-                                    class="form-control input-md" type="text" ng-model="provider.contactCellphone"/>
-                            </div>
-                        </div>
-                    </form>
-                </div>
-            </div>
-            <div role="tabpanel" class="tab-pane" id="condiciones">
-                <div class="row clearfix row-space">
-                    <form class="form-horizontal" role="form">
-                        <div class="form-group">
-                            <label class="col-md-2 control-label" for="textinput">Forma de Pago</label>
-                            <div class="col-md-3">
-                                <input id="textinput" name="textinput" placeholder="Forma de Pago"
-                                    class="form-control input-md" type="text" ng-model="provider.paymentMethod"/>
-                            </div>
-                            <label class="col-md-2 control-label" for="textinput">Dias</label>
-                            <div class="col-md-3">
-                                <input id="textinput" name="textinput" placeholder="Dias"
-                                    class="form-control input-md" type="text" ng-model="provider.days"/>
-                            </div>                            
-                        </div>
-                        <table class="table table-striped">
-	                <thead>
-	                    <tr>
-	                        <th>Banco</th>
-	                        <th>N&deg; Cuenta</th>
-	                        <th>Moneda</th>
-	                    </tr>
-	                </thead>
-	                <tbody>
-	                    <tr>
-	                        <td>&nbsp;</td>
-	                        <td>&nbsp;</td>
-	                        <td>&nbsp;</td>
-	                    </tr>
-	                    <tr>
-	                        <td>&nbsp;</td>
-	                        <td>&nbsp;</td>
-	                        <td>&nbsp;</td>
-	                    </tr>
-	                    <tr>
-	                        <td>&nbsp;</td>
-	                        <td>&nbsp;</td>
-	                        <td>&nbsp;</td>
-	                    </tr>
-	                </tbody>
-             	</table>                 
-                    </form>
-                </div>
-            </div>
-            <div role="tabpanel" class="tab-pane" id="listaOC">
+            <div role="tabpanel" class="tab-pane" id="listaPedidoVenta">
                 <table class="table table-striped">
 	                <thead>
 	                    <tr>
 	                        <th>Item</th>
-	                        <th>Fecha Compra</th>
-	                        <th>N&deg; OC</th>
+	                        <th>Fecha Venta</th>
+	                        <th>N&deg; Pedido Venta</th>
 	                        <th>Sub Total</th>
 	                        <th>Descuento</th>
 	                        <th>Importe Neto</th>
@@ -267,7 +190,7 @@
 	                        <th>Producto</th>
 	                        <th>Descripcion</th>
 	                        <th>Unidad Medida</th>
-	                        <th>Precio Compra</th>	                        
+	                        <th>Precio Venta</th>	                        
 	                    </tr>
 	                </thead>
 	                <tbody>
@@ -299,7 +222,7 @@
     </div>
     
     <div class="row pull-right">
-	    <a ui-sref="gestionProveedor" class="btn btn-primary"><span class="glyphicon glyphicon-ok"></span> Grabar</a>
-        <a ui-sref="gestionProveedor" class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span> Cancelar</a>
+	    <a ui-sref="gestionClientes" class="btn btn-primary"><span class="glyphicon glyphicon-ok"></span> Grabar</a>
+        <a ui-sref="gestionClientes" class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span> Cancelar</a>
 	</div>
 </div>
