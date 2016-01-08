@@ -1,0 +1,202 @@
+
+<div class="container cd-main-content">
+    <div class="row">
+        <ul class="breadcrumb breadcrumb-whitebg">
+            <li><a href="#">Compras</a></li>
+            <li><a ui-sref="solicitudPedido">Solicitud de Pedido</a></li>
+            <li class="active">Nueva Solicitud de Pedido</li>
+        </ul>
+    </div>
+    <div class="row row-title">
+        <div class="col-md-9">
+            <h2 id="navbar-buttons">Nueva Solicitud de Pedido</h2>
+        </div>
+        <div class="col-md-3">
+            <div class="pull-right btn-title">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="panel-body">
+            <form class="form-horizontal" role="form">
+                <div class="form-group">                	
+                	<label class="col-md-2 control-label" for="textinput">Nro de Documento</label>
+                    <div class="col-md-3">
+                        <input id="textinput" name="textinput" placeholder="Nro de Documento"
+                            class="form-control input-md" type="text" ng-model="solped.docCode" />
+                    </div>
+                    <label class="col-md-2 control-label" for="textinput">Proveedor</label>
+                    <div class="col-md-3">
+                        <input id="textinput" name="textinput" placeholder="Proveedor"
+                            class="form-control input-md" type="text" ng-model="solped.provider" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-2 control-label" for="textinput">Fecha de Creacion</label>
+                    <div class="col-md-3">
+                        <div class='input-group date datetimepicker'>
+                            <input type='text' class="form-control" ng-model="solped.creationDate" /> 
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-calendar"></span>
+                            </span>
+                        </div>
+                    </div> 
+                                
+                </div>                             
+                <div class="form-group">
+                    <div class="col-md-5">
+                    </div>
+                    <div class="col-md-5">                        
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div role="tabpanel">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Producto</th>
+                    <th>Descripcion</th>
+                    <th>Cantidad</th>                    
+                    <th>Unidad de Medida</th>
+                    <th>Precio Unitario</th>
+                    <th>IGV</th>
+                    <th>Descuento</th>
+                    <th>Monto</th>                                        
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <div role="tabpanel">
+
+        <!-- Nav tabs -->
+        <ul class="nav nav-tabs" role="tablist">
+            <li role="presentation" class="active"><a href="#datosGenerales" aria-controls="datosGenerales" role="tab" data-toggle="tab">Datos Generales</a></li>
+            <li role="presentation"><a href="#condiciones" aria-controls="condiciones" role="tab" data-toggle="tab">Condiciones</a></li>
+            <li role="presentation"><a href="#observaciones" aria-controls="observaciones" role="tab" data-toggle="tab">Observaciones</a></li>
+        </ul>
+        
+        <div class="tab-content">
+            <div role="tabpanel" class="tab-pane active" id="datosGenerales">
+                <div class="row clearfix row-space">
+                    <form class="form-horizontal" role="form">
+                        <div class="form-group">
+                            <label class="col-md-2 control-label" for="textinput">N&deg; Items</label>
+                            <div class="col-md-3">
+                                <input id="textinput" name="textinput" placeholder="N&deg; Items"
+                                    class="form-control input-md" type="text" ng-model="solped.items"/>
+                            </div>
+                            <label class="col-md-2 control-label" for="textinput">Sub Total</label>
+                            <div class="col-md-3">
+                                <input id="textinput" name="textinput" placeholder="Sub Total"
+                                    class="form-control input-md" type="text" ng-model="solped.subTotal"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-2 control-label" for="textinput">Descuento</label>
+                            <div class="col-md-3">
+                                <input id="textinput" name="textinput" placeholder="Descuento"
+                                    class="form-control input-md" type="text" ng-model="solped.discount"/>
+                            </div>
+                            <label class="col-md-2 control-label" for="textinput">Importe Neto</label>
+                            <div class="col-md-3">
+                                <input id="textinput" name="textinput" placeholder="Importe Neto"
+                                    class="form-control input-md" type="text" ng-model="solped.netAmount"/>
+                            </div>
+                        </div>
+                        <div class="form-group">
+                            <label class="col-md-2 control-label" for="textinput">IGV</label>
+                            <div class="col-md-3">
+                                <input id="textinput" name="textinput" placeholder="IGV"
+                                    class="form-control input-md" type="text" ng-model="solped.igv"/>
+                            </div>
+                            <label class="col-md-2 control-label" for="textinput">Total</label>
+                            <div class="col-md-3">
+                                <input id="textinput" name="textinput" placeholder="Total"
+                                    class="form-control input-md" type="text" ng-model="solped.total"/>
+                            </div>
+                        </div>
+                    </form>
+                </div>
+            </div>
+            <div role="tabpanel" class="tab-pane" id="condiciones">
+                <div class="row clearfix row-space">
+                    <form class="form-horizontal" role="form">
+                        <div class="form-group">
+                            <label class="col-md-2 control-label" for="textinput">Forma de Pago</label>
+                            <div class="col-md-3">
+                                <input id="textinput" name="textinput" placeholder="Forma de Pago"
+                                    class="form-control input-md" type="text" ng-model="solped.paymentMethod"/>
+                            </div>
+                            <label class="col-md-2 control-label" for="textinput">Fecha de Pago</label>
+		                    <div class="col-md-3">
+		                        <div class='input-group date datetimepicker'>
+		                            <input type='text' class="form-control" ng-model="solped.paymentDate" /> 
+		                            <span class="input-group-addon">
+		                                <span class="glyphicon glyphicon-calendar"></span>
+		                            </span>
+		                        </div>
+		                    </div>  
+                        </div>                        
+                    </form>
+                </div>
+            </div>
+        	<div role="tabpanel" class="tab-pane" id="observaciones">
+        		<div class="row clearfix row-space">
+	             	<form class="form-horizontal" role="form">
+		        		<div class="form-group">
+			                <label class="col-md-2 control-label" for="textinput">Observaciones</label>
+			                <div class="col-md-8">
+			                    <textarea class="form-control textarea-md" placeholder="Observaciones"  style="resize:none;" cols="40" rows="4" name="textarea" id="textarea" ng-model="solped.observation" ></textarea>
+			                </div>			                                            
+                		</div>
+               		</form>
+           		</div>
+        	</div>
+        </div>
+    </div>
+    
+    <div class="row pull-right">
+	    <a ui-sref="solicitudPedido" class="btn btn-primary"><span class="glyphicon glyphicon-ok"></span> Grabar</a>
+        <a ui-sref="solicitudPedido" class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span> Cancelar</a>
+	</div>
+</div>

@@ -178,6 +178,51 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
 		url:'/editarTransferencias/:transferenciaId',
 		controller: 'transfersController',
 		templateUrl: 'partials/agregarEditarTransferencias'
+	})
+	.state('mermas', {
+		url:'/mermas',
+		controller: 'wastesController',
+		templateUrl: 'partials/mermas'
+	})
+	.state('agregarMermas', {
+		url:'/agregarMermas',
+		controller: 'wastesController',
+		templateUrl: 'partials/agregarEditarMermas'
+	})
+	.state('editarMermas', {
+		url:'/editarMermas/:mermaId',
+		controller: 'wastesController',
+		templateUrl: 'partials/agregarEditarMermas'
+	})
+	.state('ordenCompra', {
+		url:'/ordenCompra',
+		controller: 'purchaseOrderController',
+		templateUrl: 'partials/ordenCompra'
+	})
+	.state('agregarOrdenCompra', {
+		url:'/agregarOrdenCompra',
+		controller: 'purchaseOrderController',
+		templateUrl: 'partials/agregarEditarOrdenCompra'
+	})
+	.state('editarOrdenCompra', {
+		url:'/editarOrdenCompra/:ordenCompraId',
+		controller: 'purchaseOrderController',
+		templateUrl: 'partials/agregarEditarOrdenCompra'
+	})
+	.state('solicitudPedido', {
+		url:'/solicitudPedido',
+		controller: 'solpedController',
+		templateUrl: 'partials/solicitudPedido'
+	})
+	.state('agregarSolicitudPedido', {
+		url:'/agregarSolicitudPedido',
+		controller: 'solpedController',
+		templateUrl: 'partials/agregarEditarSolicitudPedido'
+	})
+	.state('editarSolicitudPedido', {
+		url:'/editarSolicitudPedido/:solpedId',
+		controller: 'solpedController',
+		templateUrl: 'partials/agregarEditarSolicitudPedido'
 	});
 	
 }]);
