@@ -124,6 +124,18 @@ public class SpringAngularJsController {
 		return "partials/rutaFabricacion/agregarEditar";
 	}
 	
+	@RequestMapping(value = "/ordenesFabricacion", method = RequestMethod.GET)
+	public String displayFabricationOrders(Locale locale, Model m) {
+		logger.info("in displayFabricationOrders.", locale);
+		return "partials/ordenesFabricacion/buscar";
+	}
+	
+	@RequestMapping(value = "/agregarEditarOrdenesFabricacion", method = RequestMethod.GET)
+	public String addEditFabricationOrders(Locale locale, Model m) {
+		logger.info("in addEditFabricationOrders.", locale);
+		return "partials/ordenesFabricacion/agregarEditar";
+	}
+	
 	@RequestMapping(value = "/planificadorNecesidades", method = RequestMethod.GET)
 	public String displayNecesityPlanner(Locale locale, Model m) {
 		logger.info("in displayNecesityPlanner.", locale);
@@ -200,5 +212,17 @@ public class SpringAngularJsController {
 	public String addEditSolped(Locale locale, Model m) {
 		logger.info("in addEditSolped.", locale);
 		return "partials/solicitudPedido/agregarEditar";
+	}
+	
+	@RequestMapping(value = "/pedidoVenta", method = RequestMethod.GET)
+	public String displaySaleOrder(Locale locale, Model m) {
+		logger.info("in displaySaleOrder.", locale);
+		return "partials/pedidoVenta/buscar";
+	}
+	
+	@RequestMapping(value = "/agregarEditarPedidoVenta", method = RequestMethod.GET)
+	public String addEditSaleOrder(Locale locale, Model m) {
+		logger.info("in addEditSaleOrder.", locale);
+		return "partials/pedidoVenta/agregarEditar";
 	}
 }

@@ -1,0 +1,87 @@
+
+<div class="container cd-main-content">
+    <div class="row">
+        <ul class="breadcrumb breadcrumb-whitebg">
+            <li><a href="#">Ventas</a></li>
+            <li class="active">Pedido de Venta</li>
+            </ul>
+    </div>
+    <div class="row row-title">
+        <div class="col-md-8">
+            <h2 id="navbar-buttons">Pedido de Venta</h2>
+        </div>
+        <div class="col-md-4">
+            <div class="pull-right btn-title">
+                <a href="#" class="btn btn-info"><span class="glyphicon glyphicon-search"></span> Buscar</a>
+                <a ui-sref="agregarPedidoVenta" class="btn btn-success"><span class="glyphicon glyphicon-plus"></span> Nuevo Pedido de Venta</a>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="panel-body">
+            <form class="form-horizontal" role="form">
+                <div class="form-group form-weight-normal">
+                    <label class="col-md-2 control-label" for="textinput">N&deg; Pedido de Venta</label>
+                    <div class="col-md-3">
+                        <input id="textinput" name="textinput" placeholder="N&deg; Pedido Venta" class="form-control input-md"
+                            type="text"/>
+                    </div>
+                    <label class="col-md-2 control-label" for="textinput">Cliente</label>
+                    <div class="col-md-3">
+                        <input id="textinput" name="textinput" placeholder="Cliente"
+                            class="form-control input-md" type="text"/>
+                    </div>                 
+                </div>
+                <div class="form-group form-weight-normal">
+                    <label class="col-md-2 control-label" for="textinput">Fecha de Pago</label>
+                    <div class="col-md-3">
+                        <div class='input-group date datetimepicker'>
+                            <input type='text' class="form-control" /> 
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-calendar"></span>
+                            </span>
+                        </div>
+                    </div>
+                    <label class="col-md-2 control-label" for="textinput">Fecha de Entrega</label>
+                    <div class="col-md-3">
+                        <div class='input-group date datetimepicker'>
+                            <input type='text' class="form-control" /> 
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-calendar"></span>
+                            </span>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <div class="col-md-5">
+                    </div>
+                    <div class="col-md-5">
+                        
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div role="tabpanel" class="table-responsive">
+        <table ng-table="tableParams" class="table table-striped">
+            <thead>
+                <tr>
+                    <th>N&deg; Pedido de Venta</th>
+                    <th>Producto</th>
+                    <th>Cantidad</th>
+                    <th>Unidad Medida</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="pedidoVenta in $data">
+                    <td ui-sref="editarPedidoVenta({pedidoVentaId: pedidoVenta.id})" >{{pedidoVenta.id}}</td>
+                    <td>{{pedidoVenta.product}}</td>                    
+                    <td>{{pedidoVenta.quantity}}</td>                    
+                    <td>{{pedidoVenta.um}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

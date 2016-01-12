@@ -1,0 +1,87 @@
+
+<div class="container cd-main-content">
+    <div class="row">
+        <ul class="breadcrumb breadcrumb-whitebg">
+            <li><a href="#">Produccion</a></li>
+            <li class="active">Ordenes de Fabricacion</li>
+            </ul>
+    </div>
+    <div class="row row-title">
+        <div class="col-md-9">
+            <h2 id="navbar-buttons">Ordenes de Fabricacion</h2>
+        </div>
+        <div class="col-md-3">
+            <div class="pull-right btn-title">
+                <a href="#" class="btn btn-info"><span class="glyphicon glyphicon-search"></span> Buscar</a>
+                <a ui-sref="agregarOrdenesFabricacion" class="btn btn-success"><span class="glyphicon glyphicon-plus"></span> Nueva OF</a>
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="panel-body">
+            <form class="form-horizontal" role="form">
+                <div class="form-group form-weight-normal">
+                    <label class="col-md-2 control-label" for="textinput">N&deg; Orden de Fabricacion</label>
+                    <div class="col-md-3">
+                        <input id="textinput" name="textinput" placeholder="N&deg; Orden de Fabricacion" class="form-control input-md"
+                            type="text"/>
+                    </div>
+                    <label class="col-md-2 control-label" for="textinput">Almacen</label>
+                    <div class="col-md-3">
+                        <input id="textinput" name="textinput" placeholder="Almacen"
+                            class="form-control input-md" type="text"/>
+                    </div>                 
+                </div>
+                <div class="form-group form-weight-normal">
+                    <label class="col-md-2 control-label" for="textinput">Tipo de Documento</label>
+                    <div class="col-md-3">
+                        <button class="btn btn-100 btn-default dropdown-toggle" type="button" id="tipoDocumento"
+                            data-toggle="dropdown">
+                            <span class="txt-drp">Seleccione</span> <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-100" role="menu" aria-labelledby="tipoDocumento">
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Orden de Fabricacion</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Pedido de Venta</a></li>
+                        </ul>
+                    </div>
+                    <label class="col-md-2 control-label" for="textinput">N&deg; de Documento</label>
+                    <div class="col-md-3">
+                        <input id="textinput" name="textinput" placeholder="N&deg; de Documento" class="form-control input-md"
+                            type="text"/>
+                    </div>
+                </div>
+                
+                <div class="form-group">
+                    <div class="col-md-5">
+                    </div>
+                    <div class="col-md-5">
+                        
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div role="tabpanel" class="table-responsive">
+        <table ng-table="tableParams" class="table table-striped">
+            <thead>
+                <tr>
+                    <th>N&deg; Orden de Fabricacion</th>                    
+                    <th>Almacen</th>                    
+                    <th>Producto</th>
+                    <th>Cantidad</th>
+                    <th>Unidad Medida</th>
+                </tr>
+            </thead>
+            <tbody>
+                <tr ng-repeat="ordenFabricacion in $data">
+                    <td ui-sref="editarOrdenesFabricacion({ordenFabricacionId: ordenFabricacion.id})" >{{ordenFabricacion.id}}</td>
+                    <td>{{ordenFabricacion.store}}</td>
+                    <td>{{ordenFabricacion.product}}</td>
+                    <td>{{ordenFabricacion.quantity}}</td>                    
+                    <td>{{ordenFabricacion.um}}</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+</div>

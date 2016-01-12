@@ -1,0 +1,114 @@
+
+<div class="container cd-main-content">
+    <div class="row">
+        <ul class="breadcrumb breadcrumb-whitebg">
+            <li><a href="#">Produccion</a></li>
+            <li><a ui-sref="ordenesFabricacion">Ordenes de Fabricacion</a></li>
+            <li class="active">Nueva Orden de Fabricacion</li>
+            </ul>
+    </div>
+    <div class="row row-title">
+        <div class="col-md-9">
+            <h2 id="navbar-buttons">Nueva Orden de Fabricacion</h2>
+        </div>
+        <div class="col-md-3">
+            <div class="pull-right btn-title">
+            </div>
+        </div>
+    </div>
+    <div class="row">
+        <div class="panel-body">
+            <form class="form-horizontal" role="form">
+                <div class="form-group">
+                	<label class="col-md-2 control-label" for="textinput">Tipo de Documento</label>
+                    <div class="col-md-3">
+                        <button class="btn btn-100 btn-default dropdown-toggle" type="button" id="tipoDocumento"
+                            data-toggle="dropdown">
+                            <span class="txt-drp">Seleccione</span> <span class="caret"></span>
+                        </button>
+                        <ul class="dropdown-menu dropdown-menu-100" role="menu" aria-labelledby="tipoDocumento">
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Orden de Fabricacion</a></li>
+                            <li role="presentation"><a role="menuitem" tabindex="-1" href="#">Pedido de Venta</a></li>
+                        </ul>
+                    </div>
+                	<label class="col-md-2 control-label" for="textinput">Nro de Documento</label>
+                    <div class="col-md-3">
+                        <input id="textinput" name="textinput" placeholder="Nro de Documento"
+                            class="form-control input-md" type="text" ng-model="fabricationOrders.docCode" />
+                    </div>
+                </div>
+                <div class="form-group">
+                    <label class="col-md-2 control-label" for="textinput">Cliente</label>
+                    <div class="col-md-3">
+                        <input id="textinput" name="textinput" placeholder="Cliente"
+                            class="form-control input-md" type="text" ng-model="fabricationOrders.customer" />
+                    </div>
+                    <label class="col-md-2 control-label" for="textinput">Fecha de Creacion</label>
+                    <div class="col-md-3">
+                        <div class='input-group date datetimepicker'>
+                            <input type='text' class="form-control" ng-model="fabricationOrders.creationDate" /> 
+                            <span class="input-group-addon">
+                                <span class="glyphicon glyphicon-calendar"></span>
+                            </span>
+                        </div>
+                    </div>                   
+                </div>  
+                <div class="form-group">
+                	<label class="col-md-2 control-label" for="textinput">Almacen</label>
+                	<div class="col-md-3">                		
+                		<input type="text" class="form-control input-md" id="textinput" 
+                		name="textinput" placeholder="Almacen" ng-model="fabricationOrders.store" />
+                	</div>
+                </div>                           
+                <div class="form-group">
+                    <div class="col-md-5">
+                    </div>
+                    <div class="col-md-5">                        
+                    </div>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <div role="tabpanel">
+        <table class="table table-striped">
+            <thead>
+                <tr>
+                    <th>Item</th>
+                    <th>Producto</th>
+                    <th>Descripcion</th>
+                    <th>Cantidad</th>                    
+                    <th>Unidad de Medida</th>                    
+                </tr>
+            </thead>
+            <tbody>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+                <tr>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                    <td>&nbsp;</td>
+                </tr>
+            </tbody>
+        </table>
+    </div>
+    
+    <div class="row pull-right">
+	    <a ui-sref="ordenesFabricacion" class="btn btn-primary"><span class="glyphicon glyphicon-ok"></span> Grabar</a>
+        <a ui-sref="ordenesFabricacion" class="btn btn-danger"><span class="glyphicon glyphicon-remove"></span> Cancelar</a>
+	</div>
+</div>

@@ -114,6 +114,21 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
 		controller: 'workCentersController',
 		templateUrl: 'partials/agregarEditarCentroTrabajo'
 	})
+	.state('ordenesFabricacion', {
+		url:'/ordenesFabricacion',
+		controller: 'fabricationOrdersController',
+		templateUrl: 'partials/ordenesFabricacion'
+	})
+	.state('agregarOrdenesFabricacion', {
+		url:'/agregarOrdenesFabricacion',
+		controller: 'fabricationOrdersController',
+		templateUrl: 'partials/agregarEditarOrdenesFabricacion'
+	})
+	.state('editarOrdenesFabricacion', {
+		url:'/editarOrdenesFabricacion/:routeId',
+		controller: 'fabricationOrdersController',
+		templateUrl: 'partials/agregarEditarOrdenesFabricacion'
+	})
 	.state('rutaFabricacion', {
 		url:'/rutaFabricacion',
 		controller: 'fabricationRoutesController',
@@ -223,6 +238,21 @@ app.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $ur
 		url:'/editarSolicitudPedido/:solpedId',
 		controller: 'solpedController',
 		templateUrl: 'partials/agregarEditarSolicitudPedido'
+	})
+	.state('pedidoVenta', {
+		url:'/pedidoVenta',
+		controller: 'saleOrderController',
+		templateUrl: 'partials/pedidoVenta'
+	})
+	.state('agregarPedidoVenta', {
+		url:'/agregarPedidoVenta',
+		controller: 'saleOrderController',
+		templateUrl: 'partials/agregarEditarPedidoVenta'
+	})
+	.state('editarPedidoVenta', {
+		url:'/editarPedidoVenta/:pedidoVentaId',
+		controller: 'saleOrderController',
+		templateUrl: 'partials/agregarEditarPedidoVenta'
 	});
 	
 }]);
